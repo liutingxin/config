@@ -1,0 +1,237 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=4
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+" map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+" filetype on
+" filetype indent on
+" filetype plugin on
+" filetype plugin indent on
+" set mouse=a
+" set encoding=utf-8
+" let &t_ut=''
+" set expandtab
+" set tabstop=2
+" set shiftwidth=2
+" set softtabstop=2
+" set scrolloff=5
+" set backspace=indent,eol,start
+"set foldmethod=indent
+" set foldlevel=99
+
+" set laststatus=2
+" set autochdir
+
+" au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" set noerrorbells
+set visualbell
+
+" 折叠或展开代码块
+" <C-.>
+" nnoremap <Space> za
+" nnoremap za
+
+" let mapleader=" "
+" syntax on
+set nu
+
+" set tabstop=4
+" set wrap
+set showcmd
+" set wildfire
+set hlsearch
+" exec "nohlsearch"
+set incsearch
+
+
+" key set
+noremap <LEADER><CR> :nohlsearch<CR>
+noremap S :w<CR>
+noremap Q :q<CR>
+noremap <C-G> :action Exit<CR>
+noremap <C-b> :action Run<CR>
+noremap <C-d> :action Debug<CR>
+
+noremap sr :set splitright<CR>:vsplit<CR>
+noremap sl :set nosplitright<CR>:vsplit<CR>
+noremap st :set nosplitbelow<CR>:split<CR>
+noremap sb :set splitbelow<CR>:split<CR>
+
+map tt :NERDTreeToggle<CR>
+
+" 快速打开vim config
+map <f8> :e ~/.ideavimrc<CR>
+map <C-s> :source ~/.ideavimrc<CR>
+
+
+"map 映射
+"  该命令用于创建普通模式（Normal mode）下的键映射。  映射时会记录键码（递归映射）。  如果映射的右侧包含其他映射，可能会导致递归调用。
+"
+"noremap 映射
+"  该命令用于创建普通模式下的键映射，但它不记录键码，避免了递归映射。    推荐使用 noremap，以避免不必要的问题。
+"
+"xmap映射
+"  该命令用于创建可视模式（Visual mode）下的键映射。    通常用于在选中文本后执行命令。
+"
+"除了上述命令，还有诸如 imap（插入模式）、vmap（可视模式）、omap（操作符等待模式）等映射命令
+"
+
+" noremap <C-,> :copy+1.<CR> " next
+" move current line text to another line
+" noremap <C-.> :copy-2.<CR> " pre
+" noremap <Aj> :m'>+1<CR>gv " next
+
+
+
+" ===
+" === You Complete Me
+" ===
+" nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap g/ :YcmCompleter GetDoc<CR>
+" nnoremap gt :YcmCompleter GetType<CR>
+"nnoremap gr :YcmCompleter GoToReferences<CR>
+"let g:ycm_autoclose_preview_window_after_completion=0
+"let g:ycm_autoclose_preview_window_after_insertion=1
+"let g:ycm_use_clangd = 0
+"let g:ycm_python_interpreter_path = "/bin/python3"
+"let g:ycm_python_binary_path = "/bin/python3"
+"let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+
+" ===
+" === ale
+" ===
+"let b:ale_lineters = ['pylint']
+"let b:ale_fixers = ['autopep8', 'yapf']
+
+" ===
+" === rainbow
+" ===
+"let g:rainbow_active = 1
+"let g:rainbow_conf = {
+"\   'guifgs': ['darkorange3', 'seagreen3', 'royalblue3', 'firebrick'],
+"\   'ctermfgs': ['lightyellow', 'lightcyan','lightblue', 'lightmagenta'],
+"\   'operators': '_,_',
+"\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+"\   'separately': {
+"\       '*': {},
+"\       'tex': {
+"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+"\       },
+"\       'lisp': {
+"\           'guifgs': ['darkorange3', 'seagreen3', 'royalblue3', 'firebrick'],
+"\       },
+"\       'vim': {
+"\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+"\       },
+"\       'html': {
+"\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+"\       },
+"\       'css': 0,
+"\   }
+"\}
+
+" ===
+" === taglist
+" ===
+"map <silent> T :TagbarOpenAutoClose<CR>
+
+
+" call plug#begin('~/.vim.plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'connorholyday/vim-snazzy'
+
+
+" File navigation
+ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+ Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Taglist
+" Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
+
+" Error checking
+" Plug 'w0rp/ale'
+
+" Auto Complete
+" Plug 'ycm-core/YouCompleteMe'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'luochen1990/rainbow'
+
+" vim-cpp-enhanced-highlight
+" Plug 'octol/vim-cpp-enhanced-highlight'
+
+" Undo Tree
+" Plug 'mbbill/undotree/'
+
+" Other visual enhancement
+ Plug 'nathanaelkane/vim-indent-guides'
+ Plug 'itchyny/vim-cursorword'
+
+" Git
+" Plug 'rhysd/conflict-marker.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'mhinz/vim-signify'
+" Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
+
+" HTML, CSS, JavaScript, PHP, JSON, etc.
+" Plug 'elzr/vim-json'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
+" Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+" Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
+" Plug 'mattn/emmet-vim'
+
+" Python
+" Plug 'vim-scripts/indentpython.vim'
+
+" Markdown
+ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+ Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
+ Plug 'vimwiki/vimwiki'
+
+" Bookmarks
+" Plug 'kshenoy/vim-signature'
+
+" Other useful utilities
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'junegunn/goyo.vim' " distraction free writing mode
+" Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'` to change 'word' to `word`
+" Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
+" Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '', or type i) i] i} ip
+ Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
+
+" Dependencies
+" Plug 'MarcWeber/vim-addon-mw-utils'
+ Plug 'kana/vim-textobj-user'
+" Plug 'fadein/vim-FIGlet'
+
+" call plug#end()
+
+
+" color snazzy
+" let g:SnazzyTransparent = 1
