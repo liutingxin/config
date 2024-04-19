@@ -38,6 +38,11 @@ exec "nohlsearch"
 set incsearch
 
 
+"KeySetting------------------------------------------------
+command OpenVimrc edit $MYVIMRC<CR>
+noremap <F8> :edit $MYVIMRC<CR>
+noremap <F9> :edit ~/.emacs.d/init.el<CR>
+
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap S :w<CR>
 noremap Q :q<CR>
