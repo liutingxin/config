@@ -60,7 +60,7 @@ fi
 
 
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -120,37 +120,63 @@ mkEmacsDir(){
 	
     if [ ! -d ~/.backup/myEmacs/  ]; then
         mkdir -p ~/.backup/myEmacs/
+        echo "mkdir ~/.backup/myEmacs success"
     fi
 
     if [ ! -d ~/.backup/spacemacs/  ]; then
         mkdir -p ~/.backup/spacemacs/
+        echo "mkdir ~/.backup/spacemacs success"
     fi
 }
 
 startMyemacs()
 {
-    mkEmacsDir()
+    mkEmacsDir
 
     if [ ! -d ~/.emacs.d/  ]; then
         echo "change emacs pause, not exist ~/.emacs.d/"
+        return 128
 	return
     fi
 
-    mv ~/.emacs.d ~/.backup/spacemacs/ && mv ~/.backup/myEmacs/  ~/.emacs.d
-    echo "change emacs successfully"
 
+    mv ~/.emacs.d ~/.backup/spacemacs/ 
+
+    if [ $? -eq 0 ]; then
+        mv ~/.backup/myEmacs/  ~/.emacs.d
+    else
+        return 128
+    fi
+
+    if [ $? -eq 0 ]; then
+        echo "change emacs successfully"
+    else
+        return 128
+    fi
 }
 
 startSpacemacs()
 {
-    mkEmacsDir()
+    mkEmacsDir
 
     if [ ! -d ~/.emacs.d/  ]; then
         echo "change emacs pause, not exist ~/.emacs.d/"
-	return
+        return 128
     fi
 
-    mv ~/.emacs.d ~/.backup/myEmacs/ && mv ~/.backup/spacemacs/  ~/.emacs.d
-    echo "change emacs successfully"
+    mv ~/.emacs.d ~/.backup/myEmacs/ 
+
+
+    if [ $? -eq 0 ]; then
+        mv ~/.backup/spacemacs/  ~/.emacs.d
+    else
+        return 128
+     fi
+    
+    if [ $? -eq 0 ]; then
+        echo "change emacs successfully"
+    else
+        return 128
+    fi
 }
 
