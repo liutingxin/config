@@ -136,7 +136,7 @@ startMyemacs()
 	return
     fi
 
-    mv ~/.emacs.d ~/.backup/spacemace/ && mv ~/.backup/myEmacs/  ~/.emacs.d
+    mv ~/.emacs.d ~/.backup/spacemacs/ && mv ~/.backup/myEmacs/  ~/.emacs.d
     echo "change emacs successfully"
 
 }
@@ -150,7 +150,7 @@ startSpacemacs()
 	return
     fi
 
-    mv ~/.emacs.d ~/.backup/spacemace/ && mv ~/.backup/myEmacs/  ~/.emacs.d
+    mv ~/.emacs.d ~/.backup/myEmacs/ && mv ~/.backup/spacemacs/  ~/.emacs.d
     echo "change emacs successfully"
 }
 
