@@ -65,14 +65,23 @@ alias ll='ls -la'
 alias ..='cd ..'
 #alias -='cd -'
 alias la='ls -A'
-alias gohome='cd ~'
+alias _home='cd ~'
 alias l='ls -CF'
 
 
+alias _updaterc='source ~/.bashrc'
+alias _vimbashrc='vim ~/.bashrc'
+alias _cprc='cp ~/.bashrc ~/config/'
+alias _cpspacemacs='cp ~/.spacemacs ~/config/'
+
+
+alias gitlog='git log --graph'
+
+
 # export settings
-#export LC_ALL="zh_CN.UTF-8"
-#export LC_MESSAGES="zh_CN.UTF-8"
-#export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+export LC_MESSAGES="zh_CN.UTF-8"
+export LANG="zh_CN.UTF-8"
 
 
 # Alias definitions.
