@@ -61,6 +61,8 @@ fi
 
 # some more ls aliases
 alias ll='ls -la'
+alias ..='cd ..'
+#alias -='cd -'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -133,17 +135,17 @@ startMyemacs()
 {
     mkEmacsDir
 
-    if [ ! -d ~/.emacs.d/  ]; then
-        echo "change emacs pause, not exist ~/.emacs.d/"
-        return 128
-	return
-    fi
+    #if [ ! -d ~/.emacs.d/  ]; then
+    #    echo "change emacs pause, not exist ~/.emacs.d/"
+    #    return 128
+	#return
+    #fi
 
 
-    mv ~/.emacs.d ~/.backup/spacemacs/ 
+    cp -r  ~/.emacs.d ~/.backup/spacemacs/ 
 
     if [ $? -eq 0 ]; then
-        mv ~/.backup/myEmacs/  ~/.emacs.d
+        cp -r  ~/.backup/myEmacs/.emacs.d  ~/
     else
         return 128
     fi
@@ -159,16 +161,16 @@ startSpacemacs()
 {
     mkEmacsDir
 
-    if [ ! -d ~/.emacs.d/  ]; then
-        echo "change emacs pause, not exist ~/.emacs.d/"
-        return 128
-    fi
+    #if [ ! -d ~/.emacs.d/  ]; then
+    #    echo "change emacs pause, not exist ~/.emacs.d/"
+    #    return 128
+    #fi
 
-    mv ~/.emacs.d ~/.backup/myEmacs/ 
+    cp -r ~/.emacs.d ~/.backup/myEmacs/ 
 
 
     if [ $? -eq 0 ]; then
-        mv ~/.backup/spacemacs/  ~/.emacs.d
+        cp -r  ~/.backup/spacemacs/.emacs.d  ~/
     else
         return 128
      fi

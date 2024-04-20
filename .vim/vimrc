@@ -42,6 +42,7 @@ command OpenVimrc edit $MYVIMRC
 command ReloadVimrc source $MYVIMRC
 noremap <F8> :OpenVimrc<CR>
 noremap <F9> :edit ~/.emacs.d/init.el<CR>
+noremap <F10> :!source ~/.bashrc<CR>
 "noremap <C-s> :ReloadVimrc<CR> " It's not taking effect.
 
 
