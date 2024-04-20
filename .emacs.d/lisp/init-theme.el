@@ -12,12 +12,25 @@
   ;; Font settings
   (if *is-linux*
       (progn
-        
-       ;(set-face-attribute 'default nil :font "Hack 17")
-       
-       (dolist (charset '(kana han symbol cjk-misc bopomofo))
-          (set-fontset-font (frame-parameter nil 'font) charset (font-spec :family "Hack" :size 19))))
-    (set-face-attribute 'default nil :font "Hack 19")))
+;        (set-face-attribute 'default nil :font "Hack Regular Nerd Font Complete")
+        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+                (set-fontset-font
+                 (frame-parameter nil 'font)
+                 charset
+                 (font-spec :family "Hack Regular Nerd Font Complete" :size 20)))
+        )
+    (set-face-attribute 'default nil :font "Hack Regular Nerd Font Complete 20")))
+
+
+
+;  (if *is-linux*
+;      (progn
+;        (set-face-attribute 'default nil :font "Hack Regular Nerd Font Complete")
+;        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;          (set-fontset-font (frame-parameter nil 'font) charset (font-spec :family "Hack Regular Nerd Font Complete" :size 19))))
+;    (set-face-attribute 'default nil :font "Hack Regular Nerd Font Complete 19"))
+
+
 
 
 

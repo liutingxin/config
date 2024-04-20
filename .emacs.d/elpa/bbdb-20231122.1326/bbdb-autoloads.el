@@ -1,4 +1,4 @@
-;;; bbdb-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; bbdb-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -123,7 +123,7 @@ for example only for outgoing messages.
 
 \(fn &rest MUAS)" nil nil)
 
-(register-definition-prefixes "bbdb" '("bbdb-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb" '("bbdb-")))
 
 ;;;***
 
@@ -137,7 +137,7 @@ To enable this feature, put the following into your .emacs:
 
  (add-hook \\='diary-list-entries-hook \\='bbdb-anniv-diary-entries)" nil nil)
 
-(register-definition-prefixes "bbdb-anniv" '("bbdb-anniv-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-anniv" '("bbdb-anniv-")))
 
 ;;;***
 
@@ -541,7 +541,7 @@ Interactively, use BBDB prefix \\<bbdb-mode-map>\\[bbdb-do-all-records], see `bb
 
 (autoload 'bbdb-help "bbdb-com" nil t nil)
 
-(register-definition-prefixes "bbdb-com" '("bbdb-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-com" '("bbdb-")))
 
 ;;;***
 
@@ -606,7 +606,7 @@ will look like:
 
 Note that \\=`( is the backquote, NOT the quote \\='(." nil nil)
 
-(register-definition-prefixes "bbdb-gnus-aux" '("bbdb/gnus-s"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-gnus-aux" '("bbdb/gnus-s")))
 
 ;;;***
 
@@ -616,7 +616,7 @@ Note that \\=`( is the backquote, NOT the quote \\='(." nil nil)
 (autoload 'bbdb-ispell-export "bbdb-ispell" "\
 Export BBDB records to ispell personal dictionaries." t nil)
 
-(register-definition-prefixes "bbdb-ispell" '("bbdb-ispell-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-ispell" '("bbdb-ispell-")))
 
 ;;;***
 
@@ -668,7 +668,7 @@ for outdated BBDB variables that are set via your personal `custom-file'.
 
 \(fn &optional NAME-SPACE MESSAGE)" t nil)
 
-(register-definition-prefixes "bbdb-migrate" '("bbdb-migrate-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-migrate" '("bbdb-migrate-")))
 
 ;;;***
 
@@ -868,7 +868,7 @@ For use as an element of `bbdb-notice-record-hook'.
 
 \(fn RECORD)" nil nil)
 
-(register-definition-prefixes "bbdb-mua" '("bbdb-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-mua" '("bbdb-")))
 
 ;;;***
 
@@ -916,7 +916,7 @@ might not want to rely for encryption on a hook function
 which runs just before the message is sent, that is, you might want
 to call the command `bbdb-pgp' manually, then call `mml-preview'." t nil)
 
-(register-definition-prefixes "bbdb-pgp" '("bbdb-pgp-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-pgp" '("bbdb-pgp-")))
 
 ;;;***
 
@@ -943,14 +943,14 @@ Do not call this in your init file.  Use `bbdb-initialize'.
 However, this is not the full story.  See bbdb-sc.el for how to fully hook
 BBDB into Supercite." nil nil)
 
-(register-definition-prefixes "bbdb-sc" '("bbdb-sc-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-sc" '("bbdb-sc-")))
 
 ;;;***
 
 ;;;### (autoloads nil "bbdb-site" "bbdb-site.el" (0 0 0 0))
 ;;; Generated autoloads from bbdb-site.el
 
-(register-definition-prefixes "bbdb-site" '("bbdb-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-site" '("bbdb-")))
 
 ;;;***
 
@@ -1002,7 +1002,7 @@ Discard the record and return nil if the record does not have a name or mail.
 
 \(fn STRING &optional RULE NO-DISPLAY)" t nil)
 
-(register-definition-prefixes "bbdb-snarf" '("bbdb-snarf-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-snarf" '("bbdb-snarf-")))
 
 ;;;***
 
@@ -1016,7 +1016,7 @@ RULE should be an element of `bbdb-tex-alist'.
 
 \(fn RECORDS FILE RULE)" t nil)
 
-(register-definition-prefixes "bbdb-tex" '("bbdb-tex-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-tex" '("bbdb-tex-")))
 
 ;;;***
 
@@ -1111,7 +1111,7 @@ from different senders.
 
 \(fn RECORD)" nil nil)
 
-(register-definition-prefixes "bbdb-vm-aux" '("bbdb/vm-a"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bbdb-vm-aux" '("bbdb/vm-a")))
 
 ;;;***
 

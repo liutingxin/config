@@ -1,4 +1,4 @@
-;;; ivy-hydra-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; ivy-hydra-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "ivy-hydra" "ivy-hydra.el" (0 0 0 0))
 ;;; Generated autoloads from ivy-hydra.el
 
-(register-definition-prefixes "ivy-hydra" '("hydra-ivy" "ivy-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy-hydra" '("hydra-ivy" "ivy-")))
 
 ;;;***
 

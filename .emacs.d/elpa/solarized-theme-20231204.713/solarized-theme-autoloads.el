@@ -1,4 +1,4 @@
-;;; solarized-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; solarized-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -31,7 +31,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "solarized" '("solarized-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized" '("solarized-")))
 
 ;;;***
 
@@ -39,7 +39,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-dark-high-contrast-theme.el
 
-(register-definition-prefixes "solarized-dark-high-contrast-theme" '("solarized-dark-high-contrast"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-dark-high-contrast-theme" '("solarized-dark-high-contrast")))
 
 ;;;***
 
@@ -47,7 +47,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-dark-theme.el
 
-(register-definition-prefixes "solarized-dark-theme" '("solarized-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-dark-theme" '("solarized-dark")))
 
 ;;;***
 
@@ -55,7 +55,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  0 0))
 ;;; Generated autoloads from solarized-faces.el
 
-(register-definition-prefixes "solarized-faces" '("solarized-definition"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-faces" '("solarized-definition")))
 
 ;;;***
 
@@ -63,7 +63,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-gruvbox-dark-theme.el
 
-(register-definition-prefixes "solarized-gruvbox-dark-theme" '("solarized-gruvbox-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-gruvbox-dark-theme" '("solarized-gruvbox-dark")))
 
 ;;;***
 
@@ -71,7 +71,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-gruvbox-light-theme.el
 
-(register-definition-prefixes "solarized-gruvbox-light-theme" '("solarized-gruvbox-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-gruvbox-light-theme" '("solarized-gruvbox-light")))
 
 ;;;***
 
@@ -79,7 +79,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-light-high-contrast-theme.el
 
-(register-definition-prefixes "solarized-light-high-contrast-theme" '("solarized-light-high-contrast"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-light-high-contrast-theme" '("solarized-light-high-contrast")))
 
 ;;;***
 
@@ -87,7 +87,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-light-theme.el
 
-(register-definition-prefixes "solarized-light-theme" '("solarized-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-light-theme" '("solarized-light")))
 
 ;;;***
 
@@ -95,7 +95,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-palettes.el
 
-(register-definition-prefixes "solarized-palettes" '("solarized-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-palettes" '("solarized-")))
 
 ;;;***
 
@@ -103,7 +103,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-selenized-black-theme.el
 
-(register-definition-prefixes "solarized-selenized-black-theme" '("solarized-selenized-black"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-selenized-black-theme" '("solarized-selenized-black")))
 
 ;;;***
 
@@ -111,7 +111,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-selenized-dark-theme.el
 
-(register-definition-prefixes "solarized-selenized-dark-theme" '("solarized-selenized-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-selenized-dark-theme" '("solarized-selenized-dark")))
 
 ;;;***
 
@@ -119,7 +119,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-selenized-light-theme.el
 
-(register-definition-prefixes "solarized-selenized-light-theme" '("solarized-selenized-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-selenized-light-theme" '("solarized-selenized-light")))
 
 ;;;***
 
@@ -127,7 +127,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-selenized-white-theme.el
 
-(register-definition-prefixes "solarized-selenized-white-theme" '("solarized-selenized-white"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-selenized-white-theme" '("solarized-selenized-white")))
 
 ;;;***
 
@@ -135,7 +135,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-theme-utils.el
 
-(register-definition-prefixes "solarized-theme-utils" '("solarized-import-faces"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-theme-utils" '("solarized-import-faces")))
 
 ;;;***
 
@@ -143,7 +143,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-wombat-dark-theme.el
 
-(register-definition-prefixes "solarized-wombat-dark-theme" '("solarized-wombat-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-wombat-dark-theme" '("solarized-wombat-dark")))
 
 ;;;***
 
@@ -151,7 +151,7 @@ The Returned color-palette has the same format as `solarized-color-palette'
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from solarized-zenburn-theme.el
 
-(register-definition-prefixes "solarized-zenburn-theme" '("solarized-zenburn"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "solarized-zenburn-theme" '("solarized-zenburn")))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; cliphist-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; cliphist-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -27,7 +27,7 @@ NUM and selected item is passed to `cliphist-select-item-callback'.
 
 \(fn &optional NUM)" t nil)
 
-(register-definition-prefixes "cliphist" '("cliphist-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist" '("cliphist-")))
 
 ;;;***
 
@@ -35,7 +35,7 @@ NUM and selected item is passed to `cliphist-select-item-callback'.
 ;;;;;;  0 0))
 ;;; Generated autoloads from cliphist-clipit.el
 
-(register-definition-prefixes "cliphist-clipit" '("cliphist-clipit-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist-clipit" '("cliphist-clipit-")))
 
 ;;;***
 
@@ -43,7 +43,7 @@ NUM and selected item is passed to `cliphist-select-item-callback'.
 ;;;;;;  0 0))
 ;;; Generated autoloads from cliphist-flycut.el
 
-(register-definition-prefixes "cliphist-flycut" '("cliphist-flycut-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist-flycut" '("cliphist-flycut-")))
 
 ;;;***
 
@@ -51,7 +51,7 @@ NUM and selected item is passed to `cliphist-select-item-callback'.
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from cliphist-greenclip.el
 
-(register-definition-prefixes "cliphist-greenclip" '("cliphist-greenclip-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist-greenclip" '("cliphist-greenclip-")))
 
 ;;;***
 
@@ -59,14 +59,14 @@ NUM and selected item is passed to `cliphist-select-item-callback'.
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from cliphist-parcellite.el
 
-(register-definition-prefixes "cliphist-parcellite" '("cliphist-parcellite-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist-parcellite" '("cliphist-parcellite-")))
 
 ;;;***
 
 ;;;### (autoloads nil "cliphist-sdk" "cliphist-sdk.el" (0 0 0 0))
 ;;; Generated autoloads from cliphist-sdk.el
 
-(register-definition-prefixes "cliphist-sdk" '("cliphist-sdk-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cliphist-sdk" '("cliphist-sdk-")))
 
 ;;;***
 

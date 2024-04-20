@@ -1,4 +1,4 @@
-;;; pinyinlib-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pinyinlib-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -9,7 +9,7 @@
 ;;;### (autoloads nil "pinyinlib" "pinyinlib.el" (0 0 0 0))
 ;;; Generated autoloads from pinyinlib.el
 
-(register-definition-prefixes "pinyinlib" '("pinyinlib-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pinyinlib" '("pinyinlib-")))
 
 ;;;***
 

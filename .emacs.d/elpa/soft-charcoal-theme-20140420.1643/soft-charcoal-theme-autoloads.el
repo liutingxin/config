@@ -1,4 +1,4 @@
-;;; soft-charcoal-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; soft-charcoal-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

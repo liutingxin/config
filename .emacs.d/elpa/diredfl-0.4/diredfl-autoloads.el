@@ -1,4 +1,4 @@
-;;; diredfl-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; diredfl-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,19 +12,10 @@
 (autoload 'diredfl-mode "diredfl" "\
 Enable additional font locking in `dired-mode'.
 
-This is a minor mode.  If called interactively, toggle the
-`Diredfl mode' mode.  If the prefix argument is positive, enable
-the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `diredfl-mode'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Diredfl mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -43,20 +34,16 @@ or call the function `diredfl-global-mode'.")
 (autoload 'diredfl-global-mode "diredfl" "\
 Toggle Diredfl mode in all buffers.
 With prefix ARG, enable Diredfl-Global mode if ARG is positive;
-otherwise, disable it.
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
 
-If called from Lisp, toggle the mode if ARG is `toggle'.
-Enable the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-Diredfl mode is enabled in all buffers where `(lambda nil (when
-\(derived-mode-p 'dired-mode) (diredfl-mode)))' would do it.
-
+Diredfl mode is enabled in all buffers where
+`(lambda nil (when (derived-mode-p 'dired-mode) (diredfl-mode)))' would do it.
 See `diredfl-mode' for more information on Diredfl mode.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "diredfl" '("diredfl-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "diredfl" '("diredfl-")))
 
 ;;;***
 

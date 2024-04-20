@@ -1,4 +1,4 @@
-;;; color-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; color-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -127,7 +127,7 @@ Submit your color-theme to the maintainer." t nil)
 (autoload 'color-theme-initialize "color-theme" "\
 Initialize the color theme package by loading color-theme-libraries." t nil)
 
-(register-definition-prefixes "color-theme" '("color-theme" "define-color-theme"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "color-theme" '("color-theme" "define-color-theme")))
 
 ;;;***
 

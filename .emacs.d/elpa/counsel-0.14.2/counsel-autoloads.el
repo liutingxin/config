@@ -1,4 +1,4 @@
-;;; counsel-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; counsel-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -486,7 +486,7 @@ Compilation errors." t nil)
 Flycheck errors." t nil)
 
 (defvar counsel-mode nil "\
-Non-nil if counsel mode is enabled.
+Non-nil if Counsel mode is enabled.
 See the `counsel-mode' command
 for a description of this minor mode.
 Setting this variable directly does not take effect;
@@ -506,7 +506,7 @@ Local bindings (`counsel-mode-map'):
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "counsel" '("counsel-" "ivy-function-called-at-point"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "counsel" '("counsel-" "ivy-function-called-at-point")))
 
 ;;;***
 

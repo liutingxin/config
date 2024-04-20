@@ -1,4 +1,4 @@
-;;; company-native-complete-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; company-native-complete-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -16,7 +16,7 @@ Dispatch based on COMMAND.
 
 \(fn COMMAND &rest IGNORED)" t nil)
 
-(register-definition-prefixes "company-native-complete" '("company-native-complete--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-native-complete" '("company-native-complete--")))
 
 ;;;***
 

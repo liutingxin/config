@@ -1,4 +1,4 @@
-;;; esup-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; esup-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -16,14 +16,14 @@ ARGS is a list of extra command line arguments to pass to Emacs.
 
 \(fn &optional INIT-FILE &rest ARGS)" t nil)
 
-(register-definition-prefixes "esup" '("esup-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "esup" '("esup-")))
 
 ;;;***
 
 ;;;### (autoloads nil "esup-child" "esup-child.el" (0 0 0 0))
 ;;; Generated autoloads from esup-child.el
 
-(register-definition-prefixes "esup-child" '("esup-" "with-esup-child-increasing-depth"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "esup-child" '("esup-" "with-esup-child-increasing-depth")))
 
 ;;;***
 

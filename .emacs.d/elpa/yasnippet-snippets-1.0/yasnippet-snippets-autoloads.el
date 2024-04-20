@@ -1,4 +1,4 @@
-;;; yasnippet-snippets-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; yasnippet-snippets-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@ Load the `yasnippet-snippets' snippets directory." nil nil)
 
 (eval-after-load 'yasnippet '(yasnippet-snippets-initialize))
 
-(register-definition-prefixes "yasnippet-snippets" '("yasnippet-snippets-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "yasnippet-snippets" '("yasnippet-snippets-")))
 
 ;;;***
 

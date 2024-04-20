@@ -1,4 +1,4 @@
-;;; git-modes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; git-modes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -18,7 +18,7 @@ A major mode for editing .gitattributes files.
 
 (dolist (pattern '("/\\.gitattributes\\'" "/info/attributes\\'" "/git/attributes\\'")) (add-to-list 'auto-mode-alist (cons pattern #'gitattributes-mode)))
 
-(register-definition-prefixes "gitattributes-mode" '("gitattributes-mode-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gitattributes-mode" '("gitattributes-mode-")))
 
 ;;;***
 
@@ -33,7 +33,7 @@ A major mode for editing .gitconfig files.
 
 (dolist (pattern '("/\\.gitconfig\\'" "/\\.git/config\\'" "/modules/.*/config\\'" "/git/config\\'" "/\\.gitmodules\\'" "/etc/gitconfig\\'")) (add-to-list 'auto-mode-alist (cons pattern 'gitconfig-mode)))
 
-(register-definition-prefixes "gitconfig-mode" '("gitconfig-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gitconfig-mode" '("gitconfig-")))
 
 ;;;***
 
@@ -48,7 +48,7 @@ A major mode for editing .gitignore files.
 
 (dolist (pattern (list "/\\.gitignore\\'" "/info/exclude\\'" "/git/ignore\\'")) (add-to-list 'auto-mode-alist (cons pattern 'gitignore-mode)))
 
-(register-definition-prefixes "gitignore-mode" '("gitignore-mode-font-lock-keywords"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gitignore-mode" '("gitignore-mode-font-lock-keywords")))
 
 ;;;***
 

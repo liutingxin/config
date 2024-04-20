@@ -110,6 +110,7 @@
   (add-hook 'magit-post-commit-hook #'my-git-check-status)
   (add-hook 'git-commit-post-finish-hook #'my-git-check-status))
 
+
 (defun my-git-gutter-toggle ()
   "Toggle git gutter."
   (interactive)
@@ -118,6 +119,7 @@
   ;; clear the markup right away
   (sit-for 0.1)
   (git-gutter:clear))
+
 
 (defun my-git-gutter-reset-to-default ()
   "Restore git gutter to its original status.
@@ -128,7 +130,8 @@ Show the diff between current working code and git head."
 
 (my-run-with-idle-timer 2 #'global-git-gutter-mode)
 
-(global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
+;; (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
+(global-set-key (kbd "C-x C-g") 'git-gutter-mode)
 (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
 ;; Stage current hunk
 (global-set-key (kbd "C-x v s") 'git-gutter:stage-hunk)
@@ -136,6 +139,7 @@ Show the diff between current working code and git head."
 (global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
 
 ;; }}
+
 
 (defun my-git-commit-id ()
   "Select commit id from current branch."
@@ -145,17 +149,20 @@ Show the diff between current working code and git head."
     (when item
       (car (split-string item "|" t)))))
 
+
 (defun my-git-show-commit-internal ()
   "Show git commit."
   (let* ((id (my-git-commit-id)))
     (when id
       (shell-command-to-string (format "git show %s" id)))))
 
+
 (defun my-git-show-commit ()
   "Show commit using ffip."
   (interactive)
   (let* ((ffip-diff-backends '(("Show git commit" . my-git-show-commit-internal))))
     (ffip-show-diff 0)))
+
 
 ;; {{ git-timemachine
 (defun my-git-timemachine-show-selected-revision ()
@@ -173,6 +180,7 @@ Show the diff between current working code and git head."
                           (setq rev (cdr rev)))
                         (git-timemachine-show-revision rev)))))
 
+
 (defun my-git-timemachine ()
   "Open git snapshot with the selected version."
   (interactive)
@@ -180,11 +188,13 @@ Show the diff between current working code and git head."
   (git-timemachine--start #'my-git-timemachine-show-selected-revision))
 ;; }}
 
+
 (defun git-get-current-file-relative-path ()
   "Get relative path of current file for Git."
   (replace-regexp-in-string (concat "^" (file-name-as-directory default-directory))
                             ""
                             buffer-file-name))
+
 
 (defun git-checkout-current-file ()
   "Git checkout current file."
@@ -195,6 +205,7 @@ Show the diff between current working code and git head."
     (let* ((filename (git-get-current-file-relative-path)))
       (shell-command (concat "git checkout " filename))
       (message "DONE! git checkout %s" filename))))
+
 
 (defvar git-commit-message-history nil)
 (defun git-commit-tracked ()
@@ -214,6 +225,7 @@ Show the diff between current working code and git head."
      (t
       (message "Do nothing!")))))
 
+
 (defun git-add-current-file ()
   "Git add file of current buffer."
   (interactive)
@@ -225,10 +237,13 @@ Show the diff between current working code and git head."
       (shell-command (concat "git add " filename))
       (message "%s added. HEAD: %s" filename head-info))))
 
+
 ;; {{ look up merge conflict
+
 (defvar my-goto-merge-conflict-fns
   '(("n" my-next-merge-conflict)
     ("p" my-prev-merge-conflict)))
+
 
 (defun my-goto-merge-conflict-internal (forward-p)
   "Goto specific hunk.  If FORWARD-P is t, go in forward direction."
@@ -245,15 +260,18 @@ Show the diff between current working code and git head."
             (goto-char prev-pos)
             (message "No conflicts found")))))))
 
+
 (defun my-next-merge-conflict ()
   "Go to next merge conflict."
   (interactive)
   (my-goto-merge-conflict-internal t))
 
+
 (defun my-prev-merge-conflict ()
   "Go to previous merge conflict."
   (interactive)
   (my-goto-merge-conflict-internal nil))
+
 
 (defun my-search-next-merge-conflict ()
   "Search next merge conflict."
@@ -262,6 +280,7 @@ Show the diff between current working code and git head."
                          "Goto merge conflict: [n]ext [p]revious [q]uit"
                          'my-goto-merge-conflict-internal
                          t))
+
 
 (defun my-search-prev-merge-conflict ()
   "Search previous merge conflict."
@@ -272,10 +291,12 @@ Show the diff between current working code and git head."
                          nil))
 ;; }}
 
+
 ;; {{ look up diff hunk
 (defvar my-goto-diff-hunk-fns
   '(("n" diff-hunk-next)
     ("p" diff-hunk-prev)))
+
 
 (defun my-search-next-diff-hunk ()
   "Search next diff hunk."
@@ -284,6 +305,7 @@ Show the diff between current working code and git head."
                          "Goto diff hunk: [n]ext [p]revious [q]uit"
                          'diff-hunk-next))
 
+
 (defun my-search-prev-diff-hunk ()
   "Search previous diff hunk."
   (interactive)
@@ -291,6 +313,7 @@ Show the diff between current working code and git head."
                          "Goto diff hunk: [n]ext [p]revious [q]uit"
                          'diff-hunk-prev))
 ;; }}
+
 
 ;; {{
 (defun my-git-extract-based (target lines)
@@ -311,6 +334,7 @@ Show the diff between current working code and git head."
                                       (car (split-string (nth (1- i) lines)
                                                          " +")))))
     based))
+
 
 (defun my-git-rebase-interactive (&optional user-select-branch)
   "Rebase interactively on the closest branch or tag in git log output.
@@ -341,6 +365,7 @@ If USER-SELECT-BRANCH is not nil, rebase on the tag or branch selected by user."
       (magit-rebase-interactive based nil))))
 ;; }}
 
+
 (defun my-git-cherry-pick-from-reflog ()
   "Cherry pick a commit from git reflog."
   (interactive)
@@ -351,6 +376,7 @@ If USER-SELECT-BRANCH is not nil, rebase on the tag or branch selected by user."
     (when commit-id
       (my-ensure 'magit)
       (magit-cherry-copy commit-id))))
+
 
 ;; {{ git-gutter use ivy
 (defun my-git-reshape-gutter (gutter)
@@ -379,6 +405,7 @@ If USER-SELECT-BRANCH is not nil, rebase on the tag or branch selected by user."
                   target-linenum target-line)
           target-linenum)))
 
+
 (defun my-git-goto-gutter ()
   "Go to specific git gutter."
   (interactive)
@@ -391,6 +418,7 @@ If USER-SELECT-BRANCH is not nil, rebase on the tag or branch selected by user."
     (message "NO git-gutters!")))
 
 ;; }}
+
 
 (defun my-git-find-file-in-commit (&optional level)
   "Find file in previous commit with LEVEL.
@@ -406,12 +434,14 @@ If LEVEL > 0, find file in previous LEVEL commit."
     (when file
       (find-file file))))
 
+
 (defun my-git-commit-create ()
   "Git commit."
   (interactive)
   (let ((msg (read-string "Git commit message: ")))
     (when (> (length msg) 0)
       (shell-command (format "git commit --no-verify -m \"%s\"" msg)))))
+
 
 (defun my-git-commit-amend (&optional reuse-p)
   "Git amend.  If REUSE-P is t, commit by reusing original message."
@@ -421,6 +451,7 @@ If LEVEL > 0, find file in previous LEVEL commit."
          (extra-args (if reuse-p "--reuse-message=HEAD" ""))
          cmd)
 
+
     (setq msg (unless reuse-p
                 (read-string "Git amend message: " original-msg)))
     (when (or reuse-p (> (length msg) 0))
@@ -429,11 +460,39 @@ If LEVEL > 0, find file in previous LEVEL commit."
         (setq cmd (format "%s -m \"%s\"" cmd msg)))
       (shell-command cmd))))
 
+
+
+
 (defun my-git-current-branch ()
   "Show current branch name."
   (interactive)
   (message "Git current branch: %s"
            (string-trim (shell-command-to-string "git branch --show-current"))))
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;----
+;; (defun my-git-get-current-branch ()
+;;   "Show current branch name."
+;;   (interactive)
+;;   (message "current-branch: %s"
+;;            (string-trim (shell-command-to-string "git branch --show-current"))))
+
+
+;; ;; v1
+;; ;; show current branch in Magit buffer
+;; (defun my-magit-insert-current-branch ()
+;;   "Insert current branch name into the Magit buffer."
+;;   (insert (format "Branch: %s\n" (my-git-get-current-branch)))
+;;   )
+;;
+;; (add-hook 'magit-status-sections-hook 'my-magit-insert-current-branch)
+
+
+
+
+
 
 (provide 'init-git)
 ;;; init-git.el ends here

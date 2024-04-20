@@ -1,4 +1,4 @@
-;;; jazz-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; jazz-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -11,7 +11,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "jazz-theme" '("jazz"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "jazz-theme" '("jazz")))
 
 ;;;***
 

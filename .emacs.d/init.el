@@ -43,12 +43,28 @@
 ;; 可选功能启用：
 ;; 启用 erase-buffer 函数。
 
+;C-x C-e 执行emacs代码
+;C-h f查找函数
+;C-h C-f
+;C-h v搜索变量
+;
+;停留在一个变量上，C-h v查看当前变量的信息
+;C-x C-h 查看键绑定
+;
+;M-x eval-buber不重启emacs,执行emacs配置代码
+;
+;C-h C-f find-function 查看源码, 查看订阅的快捷键
+;
+;super-c super-v复制粘贴代码，好像是改键后
+;
+;(set-face-attribute 'default nil :height 160)
+
+
 
 ;;; Code:
 
 ;; Without this comment emacs25 adds (package-initialize) here
-(package-initialize)
-
+;(package-initialize)
 
 ;; check emacs version
 (let* ((minver "26.1"))
@@ -60,33 +76,58 @@
 
 (defvar my-debug nil "Enable debug mode.")
 
-
 ;;Disable emacs's prompt bell
 (setq ring-bell-function 'ignore)
-
 
 ;; load the emacs elpa-mirror
 (add-to-list 'load-path "~/.emacs.d/site-lisp/elpa-mirror")
 (require 'elpa-mirror)
 
-;; 定义函数，用于自动刷新包列表
-(defun refresh-all-packages ()
-  "Refresh all packages in the package.el system."
-  (interactive)
-  (package-refresh-contents)
-  (message "Package refresh complete."))
+;; 定义函数，用于自动刷新包列表, 加上这个，emacs启动时自动刷新包列表，特别特别慢
+;(defun refresh-all-packages ()
+;  "Refresh all packages in the package.el system."
+;  (interactive)
+;  (package-refresh-contents)
+;  (message "Package refresh complete."))
 
 ;; 调用函数，执行刷新操作
-(refresh-all-packages)
+;(refresh-all-packages)
 
+;;快速打开配置文件
+(defun open-init-file ()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+(global-set-key (kbd "<f8>") 'open-init-file)
 
 ;; 加载 benchmark-init 模块
-(require 'benchmark-init)
+;;(require 'benchmark-init)
 
 ;; 在 `after-init-hook` 中添加钩子
-(add-hook 'after-init-hook 'benchmark-init/deactivate)
+;(add-hook 'after-init-hook 'benchmark-init/deactivate)
+
+;;;增强min-buffer显示的内容，包含文件其他属性信息等
+;(package-install 'marginalia)
+(marginalia-mode t)
 ;;;
 
+;;;
+;(package-install 'embark)
+;(global-set-key (kbd "C-;") 'embark-act)
+;;;
+
+;;set SHELL
+;(setq explicit-shell-file-name "/bin/bash")
+;(setq shell-file-name explicit-shell-file-name)
+;(setq explicit-bash-args '("--noediting" "--login" "-i"))
+;(setq tramp-verbose 10) ;; 如果你使用 TRAMP 模式连接远程主机的话，增加此行
+;(setenv "TERM" "xterm-256color")
+
+;;; 高亮当前行
+(global-hl-line-mode 1)
+
+;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; set OS variables
@@ -111,6 +152,7 @@
     (list start end)))
 ;; }}
 
+;; only in mac, Current config can be workded.
 (setq *no-memory* (cond
                    (*is-a-mac*
                     ;; @see https://discussions.apple.com/thread/1753088
@@ -183,6 +225,12 @@
   (require-init 'init-yasnippet t)
   (require-init 'init-cc-mode t)
   (require-init 'init-linum-mode)
+
+  ;(set-fringe-mode 0)
+  ;(require-init 'init-cmake-ide t)
+  ;;没有和并好，本Emacs配置中存在一个MakeFile,但目标仓库也存在一个MakeFile代码
+  ;;@see https://github.com/atilaneves/cmake-ide
+
   (require-init 'init-git)
   (require-init 'init-gtags t)
   (require-init 'init-clipboard)
@@ -204,7 +252,8 @@
   ;; don't play with color-theme in light weight mode
   ;; color themes are already installed in `init-elpa.el'
   (require-init 'init-theme)
-
+  (require-init 'init-rainbow-delimiters t)
+  (require-init 'init-ggtags t)
 
 
   ;; essential tools
@@ -219,6 +268,7 @@
   (require-init 'init-dired t)
   (require-init 'init-writting t)
   (require-init 'init-hydra) ; hotkey is required everywhere
+
   ;; use evil mode (vi key binding)
   (require-init 'init-evil) ; init-evil dependent on init-clipboard
   (require-init 'init-pdf)
@@ -263,7 +313,8 @@
            (format "%.2f seconds"
                    (float-time (time-subtract after-init-time before-init-time)))
            gcs-done)
+(put 'erase-buffer 'disabled nil)
+
 ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; End:
-(put 'erase-buffer 'disabled nil)

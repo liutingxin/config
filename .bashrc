@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 
@@ -60,11 +58,21 @@ fi
 
 
 # some more ls aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
 alias ll='ls -la'
 alias ..='cd ..'
 #alias -='cd -'
 alias la='ls -A'
+alias gohome='cd ~'
 alias l='ls -CF'
+
+
+# export settings
+#export LC_ALL="zh_CN.UTF-8"
+#export LC_MESSAGES="zh_CN.UTF-8"
+#export LANG="zh_CN.UTF-8"
 
 
 # Alias definitions.
@@ -182,3 +190,4 @@ startSpacemacs()
     fi
 }
 
+source /usr/share/nvm/init-nvm.sh

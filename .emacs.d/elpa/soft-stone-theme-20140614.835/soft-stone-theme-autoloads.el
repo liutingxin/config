@@ -1,4 +1,4 @@
-;;; soft-stone-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; soft-stone-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; sublime-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; sublime-themes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -11,7 +11,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "brin-theme" '("brin"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "brin-theme" '("brin")))
 
 ;;;***
 
@@ -20,7 +20,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))) (when (not window-system) (custom-set-faces '(default ((t (:background nil)))))))
 
-(register-definition-prefixes "dorsey-theme" '("dorsey"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dorsey-theme" '("dorsey")))
 
 ;;;***
 
@@ -29,7 +29,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))) (when (not window-system) (custom-set-faces '(default ((t (:background nil)))))))
 
-(register-definition-prefixes "fogus-theme" '("fogus"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "fogus-theme" '("fogus")))
 
 ;;;***
 
@@ -38,7 +38,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "graham-theme" '("graham"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "graham-theme" '("graham")))
 
 ;;;***
 
@@ -47,7 +47,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "granger-theme" '("granger"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "granger-theme" '("granger")))
 
 ;;;***
 
@@ -56,7 +56,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))) (when (not window-system) (custom-set-faces '(default ((t (:background nil)))))))
 
-(register-definition-prefixes "hickey-theme" '("hickey"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hickey-theme" '("hickey")))
 
 ;;;***
 
@@ -65,7 +65,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))) (when (not window-system) (custom-set-faces '(default ((t (:background nil)))))))
 
-(register-definition-prefixes "junio-theme" '("junio"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "junio-theme" '("junio")))
 
 ;;;***
 
@@ -75,7 +75,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "mccarthy-theme" '("mccarthy"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mccarthy-theme" '("mccarthy")))
 
 ;;;***
 
@@ -84,7 +84,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "odersky-theme" '("odersky"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "odersky-theme" '("odersky")))
 
 ;;;***
 
@@ -93,7 +93,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "ritchie-theme" '("ritchie"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ritchie-theme" '("ritchie")))
 
 ;;;***
 
@@ -102,7 +102,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "spolsky-theme" '("spolsky"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "spolsky-theme" '("spolsky")))
 
 ;;;***
 
@@ -119,7 +119,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))) (when (not window-system) (custom-set-faces '(default ((t (:background nil)))))))
 
-(register-definition-prefixes "wilson-theme" '("wilson"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "wilson-theme" '("wilson")))
 
 ;;;***
 

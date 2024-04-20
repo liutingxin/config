@@ -1,4 +1,4 @@
-;;; gnu-elpa-keyring-update-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; gnu-elpa-keyring-update-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -28,7 +28,7 @@ Import new GNU ELPA keys (if any) into package.el's keyring." nil nil)
                (file-newer-than-file-p kr ts)
                (gnu-elpa-keyring-update)))))
 
-(register-definition-prefixes "gnu-elpa-keyring-update" '("gnu-elpa-keyring-update--keyring"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gnu-elpa-keyring-update" '("gnu-elpa-keyring-update--keyring")))
 
 ;;;***
 

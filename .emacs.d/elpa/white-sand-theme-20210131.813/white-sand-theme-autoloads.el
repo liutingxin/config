@@ -1,4 +1,4 @@
-;;; white-sand-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; white-sand-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

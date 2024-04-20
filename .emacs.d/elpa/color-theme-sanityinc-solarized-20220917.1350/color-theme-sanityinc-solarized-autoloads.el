@@ -1,4 +1,4 @@
-;;; color-theme-sanityinc-solarized-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; color-theme-sanityinc-solarized-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -18,7 +18,7 @@ Apply the dark solarized theme." t nil)
 (autoload 'color-theme-sanityinc-solarized-light "color-theme-sanityinc-solarized" "\
 Apply the light solarized theme." t nil)
 
-(register-definition-prefixes "color-theme-sanityinc-solarized" '("color-theme-sanityinc-solarized"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "color-theme-sanityinc-solarized" '("color-theme-sanityinc-solarized")))
 
 ;;;***
 

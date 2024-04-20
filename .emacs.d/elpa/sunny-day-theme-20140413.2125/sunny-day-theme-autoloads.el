@@ -1,4 +1,4 @@
-;;; sunny-day-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; sunny-day-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

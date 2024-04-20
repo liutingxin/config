@@ -1,4 +1,4 @@
-;;; darktooth-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; darktooth-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -24,7 +24,7 @@ Create darktooth theme with NAME, DESCRIPTION, PALETTE and BODY.
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "darktooth-dark-theme" '("darktooth-modeline"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "darktooth-dark-theme" '("darktooth-modeline")))
 
 ;;;***
 
@@ -34,7 +34,7 @@ Create darktooth theme with NAME, DESCRIPTION, PALETTE and BODY.
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "darktooth-darker-theme" '("darktooth-modeline"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "darktooth-darker-theme" '("darktooth-modeline")))
 
 ;;;***
 
@@ -44,7 +44,7 @@ Create darktooth theme with NAME, DESCRIPTION, PALETTE and BODY.
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "darktooth-theme" '("darktooth-modeline"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "darktooth-theme" '("darktooth-modeline")))
 
 ;;;***
 

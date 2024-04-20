@@ -1,4 +1,4 @@
-;;; mustang-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; mustang-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

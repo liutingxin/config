@@ -1,4 +1,4 @@
-;;; professional-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; professional-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@
 (autoload 'professional-theme "professional-theme" "\
 Apply the professional-theme." t nil)
 
-(register-definition-prefixes "professional-theme" '("professional"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "professional-theme" '("professional")))
 
 ;;;***
 

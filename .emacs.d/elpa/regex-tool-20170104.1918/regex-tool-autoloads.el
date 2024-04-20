@@ -1,4 +1,4 @@
-;;; regex-tool-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; regex-tool-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -11,7 +11,7 @@
 
 (autoload 'regex-tool "regex-tool" nil t nil)
 
-(register-definition-prefixes "regex-tool" '("regex-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "regex-tool" '("regex-")))
 
 ;;;***
 

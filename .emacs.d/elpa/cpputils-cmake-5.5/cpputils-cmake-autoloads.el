@@ -1,4 +1,4 @@
-;;; cpputils-cmake-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; cpputils-cmake-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -28,7 +28,7 @@ make clean;compile" t nil)
 (autoload 'cppcm-reload-all "cpputils-cmake" "\
 Reload and reproduce everything" nil nil)
 
-(register-definition-prefixes "cpputils-cmake" '("cppcm-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cpputils-cmake" '("cppcm-")))
 
 ;;;***
 

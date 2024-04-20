@@ -1,4 +1,4 @@
-;;; lua-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; lua-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -27,7 +27,7 @@ When called interactively, switch to the process buffer.
 
 \(fn &optional NAME PROGRAM STARTFILE &rest SWITCHES)" t nil)
 
-(register-definition-prefixes "lua-mode" '("lua-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lua-mode" '("lua-")))
 
 ;;;***
 

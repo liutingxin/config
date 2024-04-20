@@ -225,6 +225,9 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 " Error checking
 Plug 'w0rp/ale'
 
+" comment
+" Plug 'preservim/nerdcommenter'
+
 " grama checking
 " To use this English grammar checking plugin, you need to install some common
 " syntax checking such as write-gool and vale using npm. (npm install -g write-good)

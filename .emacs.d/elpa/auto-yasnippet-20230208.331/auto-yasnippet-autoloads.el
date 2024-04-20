@@ -1,4 +1,4 @@
-;;; auto-yasnippet-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; auto-yasnippet-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -96,7 +96,7 @@ To save a snippet permanently, create an empty file and call this." t nil)
 (autoload 'aya-yank-snippet-from-history "auto-yasnippet" "\
 Insert snippet from history at point." t nil)
 
-(register-definition-prefixes "auto-yasnippet" '("aya-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "auto-yasnippet" '("aya-")))
 
 ;;;***
 

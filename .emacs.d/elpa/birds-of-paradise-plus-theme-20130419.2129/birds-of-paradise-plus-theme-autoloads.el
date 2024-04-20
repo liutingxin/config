@@ -1,4 +1,4 @@
-;;; birds-of-paradise-plus-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; birds-of-paradise-plus-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "birds-of-paradise-plus-theme" '("birds-of-paradise-plus"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "birds-of-paradise-plus-theme" '("birds-of-paradise-plus")))
 
 ;;;***
 

@@ -161,9 +161,9 @@
       '(
         ;; uncomment below line if you need use GNU ELPA
         ("gnu" . "https://elpa.gnu.org/packages/")
-        ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-        ;;("melpa" . "https://melpa.org/packages/")
-        ("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+        ;("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+        ("melpa" . "https://melpa.org/packages/")
+        ;("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
         ("nongnu" . "https://mirrors.ustc.edu.cn/elpa/nongnu/")
 
         ;; Use either 163 or tsinghua mirror repository when official melpa
@@ -182,6 +182,8 @@
         ;; ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
         ;; }}
         ))
+
+(package-initialize)
 
 (defvar my-ask-elpa-mirror t)
 (when (and (not noninteractive) ; no popup in batch mode
@@ -373,6 +375,8 @@ If NO-REFRESH is nil, `package-refresh-contents' is called."
 ;; update key or else users can't install packages from GNU ELPA.
 ;; @see https://www.reddit.com/r/emacs/comments/bn6k1y/updating_gnu_elpa_keys/
 ;; BTW, this setup uses MELPA only. So GNU ELPA GPG key is not used.
+
+;;2024 1/30 ;;
 (require-package 'gnu-elpa-keyring-update)
 ;; }}
 

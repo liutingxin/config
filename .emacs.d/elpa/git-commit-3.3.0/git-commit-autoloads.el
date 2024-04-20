@@ -1,4 +1,4 @@
-;;; git-commit-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; git-commit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -16,7 +16,7 @@
                   fundamental-mode
                   git-commit-elisp-text-mode))))
 
-(register-definition-prefixes "git-commit" '("git-commit-" "global-git-commit-mode"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "git-commit" '("git-commit-" "global-git-commit-mode")))
 
 ;;;***
 

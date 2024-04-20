@@ -1,4 +1,4 @@
-;;; vimrc-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; vimrc-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -17,7 +17,7 @@ Major mode for editing `vimrc', `xxx.vim' and `.exrc' configuration files.
 
 \(fn)" t nil)
 
-(register-definition-prefixes "vimrc-mode" '("vimrc-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vimrc-mode" '("vimrc-")))
 
 ;;;***
 

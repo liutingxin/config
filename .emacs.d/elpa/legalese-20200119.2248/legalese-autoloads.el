@@ -1,4 +1,4 @@
-;;; legalese-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; legalese-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -16,7 +16,7 @@ With prefix-argument ASK, ask for a license to use.
 
 \(fn ASK)" t nil)
 
-(register-definition-prefixes "legalese" '("legalese-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "legalese" '("legalese-")))
 
 ;;;***
 

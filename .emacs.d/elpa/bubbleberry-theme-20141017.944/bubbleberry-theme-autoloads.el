@@ -1,4 +1,4 @@
-;;; bubbleberry-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; bubbleberry-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "bubbleberry-theme" '("bubbleberry"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bubbleberry-theme" '("bubbleberry")))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; scratch-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; scratch-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -19,7 +19,7 @@ When called interactively with a prefix arg, prompt for the mode.
 
 \(fn MODE)" t nil)
 
-(register-definition-prefixes "scratch" '("scratch-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "scratch" '("scratch-")))
 
 ;;;***
 

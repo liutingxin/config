@@ -1,4 +1,4 @@
-;;; js-doc-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; js-doc-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -25,7 +25,7 @@ Insert a JsDoc tag interactively." t nil)
 (autoload 'js-doc-describe-tag "js-doc" "\
 Describe the JsDoc tag" t nil)
 
-(register-definition-prefixes "js-doc" '("js-doc-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "js-doc" '("js-doc-")))
 
 ;;;***
 

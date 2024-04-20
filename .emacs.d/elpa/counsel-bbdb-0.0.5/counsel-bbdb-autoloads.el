@@ -1,4 +1,4 @@
-;;; counsel-bbdb-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; counsel-bbdb-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -26,7 +26,7 @@ Extra argument APPEND-COMMA will append comma after email.
 (autoload 'counsel-bbdb-expand-mail-alias "counsel-bbdb" "\
 Insert multiple mail address in alias/group." t nil)
 
-(register-definition-prefixes "counsel-bbdb" '("counsel-bbdb-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "counsel-bbdb" '("counsel-bbdb-")))
 
 ;;;***
 

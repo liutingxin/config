@@ -1,4 +1,4 @@
-;;; find-by-pinyin-dired-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; find-by-pinyin-dired-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -25,7 +25,7 @@ The directory is detected by `ffip-project-root' if you installed `find-file-in-
 
 \(fn PATTERN)" t nil)
 
-(register-definition-prefixes "find-by-pinyin-dired" '("find-by-pinyin-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "find-by-pinyin-dired" '("find-by-pinyin-")))
 
 ;;;***
 

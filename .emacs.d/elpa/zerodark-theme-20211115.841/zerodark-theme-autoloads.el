@@ -1,4 +1,4 @@
-;;; zerodark-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; zerodark-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@ Setup the mode-line format for zerodark." t nil)
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "zerodark-theme" '("cached-for" "true-color-p" "zerodark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "zerodark-theme" '("cached-for" "true-color-p" "zerodark")))
 
 ;;;***
 

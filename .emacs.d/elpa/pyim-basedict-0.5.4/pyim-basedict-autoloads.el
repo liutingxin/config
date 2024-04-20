@@ -1,4 +1,4 @@
-;;; pyim-basedict-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pyim-basedict-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -18,7 +18,7 @@ Add pyim-basedict.pyim file to `pyim-extra-dicts'." t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from pyim-basedict-utils.el
 
-(register-definition-prefixes "pyim-basedict-utils" '("pyim-basedict-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-basedict-utils" '("pyim-basedict-")))
 
 ;;;***
 

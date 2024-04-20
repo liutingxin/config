@@ -1,4 +1,4 @@
-;;; pyim-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pyim-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -42,7 +42,7 @@ pyim 使用函数 `pyim-activate' 启动输入法的时候，会将变量
 
 \(fn &optional _)" t nil)
 
-(register-definition-prefixes "pyim" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim" '("pyim-")))
 
 ;;;***
 
@@ -50,7 +50,7 @@ pyim 使用函数 `pyim-activate' 启动输入法的时候，会将变量
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from pyim-autoselector.el
 
-(register-definition-prefixes "pyim-autoselector" '("pyim-autoselector-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-autoselector" '("pyim-autoselector-")))
 
 ;;;***
 
@@ -58,28 +58,28 @@ pyim 使用函数 `pyim-activate' 启动输入法的时候，会将变量
 ;;;;;;  0 0))
 ;;; Generated autoloads from pyim-candidates.el
 
-(register-definition-prefixes "pyim-candidates" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-candidates" '("pyim-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-cloudim" "pyim-cloudim.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-cloudim.el
 
-(register-definition-prefixes "pyim-cloudim" '("pyim-cloudim"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-cloudim" '("pyim-cloudim")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-common" "pyim-common.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-common.el
 
-(register-definition-prefixes "pyim-common" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-common" '("pyim-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-cregexp" "pyim-cregexp.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-cregexp.el
 
-(register-definition-prefixes "pyim-cregexp" '("pyim-cregexp-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-cregexp" '("pyim-cregexp-")))
 
 ;;;***
 
@@ -97,7 +97,7 @@ pyim 使用函数 `pyim-activate' 启动输入法的时候，会将变量
 \(fn &optional INSERT-ONLY)" t nil)
 
 (defvar pyim-isearch-mode nil "\
-Non-nil if pyim-isearch mode is enabled.
+Non-nil if Pyim-Isearch mode is enabled.
 See the `pyim-isearch-mode' command
 for a description of this minor mode.
 Setting this variable directly does not take effect;
@@ -109,23 +109,14 @@ or call the function `pyim-isearch-mode'.")
 (autoload 'pyim-isearch-mode "pyim-cregexp-utils" "\
 这个 mode 为 isearch 添加拼音搜索功能.
 
-This is a minor mode.  If called interactively, toggle the
-`pyim-isearch mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='pyim-isearch-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Pyim-Isearch mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "pyim-cregexp-utils" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-cregexp-utils" '("pyim-")))
 
 ;;;***
 
@@ -150,7 +141,7 @@ BUG: 当 STRING 中包含其它标点符号，并且设置 SEPERATER 时，结�
 
 \(fn STRING &optional SHOU-ZI-MU SEPARATOR RETURN-LIST)" nil nil)
 
-(register-definition-prefixes "pyim-cstring" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-cstring" '("pyim-")))
 
 ;;;***
 
@@ -158,14 +149,14 @@ BUG: 当 STRING 中包含其它标点符号，并且设置 SEPERATER 时，结�
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from pyim-cstring-utils.el
 
-(register-definition-prefixes "pyim-cstring-utils" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-cstring-utils" '("pyim-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-dcache" "pyim-dcache.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-dcache.el
 
-(register-definition-prefixes "pyim-dcache" '("pyim-dcache-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-dcache" '("pyim-dcache-")))
 
 ;;;***
 
@@ -173,14 +164,14 @@ BUG: 当 STRING 中包含其它标点符号，并且设置 SEPERATER 时，结�
 ;;;;;;  0 0))
 ;;; Generated autoloads from pyim-dhashcache.el
 
-(register-definition-prefixes "pyim-dhashcache" '("pyim-dhashcache-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-dhashcache" '("pyim-dhashcache-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-dict" "pyim-dict.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-dict.el
 
-(register-definition-prefixes "pyim-dict" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-dict" '("pyim-")))
 
 ;;;***
 
@@ -198,7 +189,7 @@ pyim 词库管理器。
 4. 保存词库设置。
 5. 重启输入法。" t nil)
 
-(register-definition-prefixes "pyim-dict-manager" '("pyim-dict-manager-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-dict-manager" '("pyim-dict-manager-")))
 
 ;;;***
 
@@ -206,14 +197,14 @@ pyim 词库管理器。
 ;;;;;;  0))
 ;;; Generated autoloads from pyim-dregcache.el
 
-(register-definition-prefixes "pyim-dregcache" '("pyim-dregcache-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-dregcache" '("pyim-dregcache-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-entered" "pyim-entered.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-entered.el
 
-(register-definition-prefixes "pyim-entered" '("pyim-entered-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-entered" '("pyim-entered-")))
 
 ;;;***
 
@@ -221,56 +212,56 @@ pyim 词库管理器。
 ;;;;;;  0))
 ;;; Generated autoloads from pyim-indicator.el
 
-(register-definition-prefixes "pyim-indicator" '("pyim-indicator-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-indicator" '("pyim-indicator-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-liberime" "pyim-liberime.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-liberime.el
 
-(register-definition-prefixes "pyim-liberime" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-liberime" '("pyim-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-outcome" "pyim-outcome.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-outcome.el
 
-(register-definition-prefixes "pyim-outcome" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-outcome" '("pyim-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-page" "pyim-page.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-page.el
 
-(register-definition-prefixes "pyim-page" '("pyim-page-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-page" '("pyim-page-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-pinyin" "pyim-pinyin.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-pinyin.el
 
-(register-definition-prefixes "pyim-pinyin" '("pyim-pinyin-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-pinyin" '("pyim-pinyin-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-preview" "pyim-preview.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-preview.el
 
-(register-definition-prefixes "pyim-preview" '("pyim-preview--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-preview" '("pyim-preview--")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-probe" "pyim-probe.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-probe.el
 
-(register-definition-prefixes "pyim-probe" '("pyim-probe-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-probe" '("pyim-probe-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-process" "pyim-process.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-process.el
 
-(register-definition-prefixes "pyim-process" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-process" '("pyim-")))
 
 ;;;***
 
@@ -278,14 +269,14 @@ pyim 词库管理器。
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from pyim-punctuation.el
 
-(register-definition-prefixes "pyim-punctuation" '("pyim-punctuation-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-punctuation" '("pyim-punctuation-")))
 
 ;;;***
 
 ;;;### (autoloads nil "pyim-pymap" "pyim-pymap.el" (0 0 0 0))
 ;;; Generated autoloads from pyim-pymap.el
 
-(register-definition-prefixes "pyim-pymap" '("pyim-pymap"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-pymap" '("pyim-pymap")))
 
 ;;;***
 
@@ -293,7 +284,7 @@ pyim 词库管理器。
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from pyim-pymap-utils.el
 
-(register-definition-prefixes "pyim-pymap-utils" '("pyim-pymap-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-pymap-utils" '("pyim-pymap-")))
 
 ;;;***
 
@@ -305,7 +296,7 @@ pyim 词库管理器。
 
 \(fn &optional SCHEME-NAME)" t nil)
 
-(register-definition-prefixes "pyim-scheme" '("pyim-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pyim-scheme" '("pyim-")))
 
 ;;;***
 

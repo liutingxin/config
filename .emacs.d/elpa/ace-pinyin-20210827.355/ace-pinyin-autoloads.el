@@ -1,4 +1,4 @@
-;;; ace-pinyin-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; ace-pinyin-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -24,19 +24,10 @@ Without PREFIX, search both Chinese and English.
 (autoload 'ace-pinyin-mode "ace-pinyin" "\
 Toggle `ace-pinyin-mode'.
 
-This is a minor mode.  If called interactively, toggle the
-`Ace-Pinyin mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `ace-pinyin-mode'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Ace-Pinyin mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -55,15 +46,11 @@ or call the function `ace-pinyin-global-mode'.")
 (autoload 'ace-pinyin-global-mode "ace-pinyin" "\
 Toggle Ace-Pinyin mode in all buffers.
 With prefix ARG, enable Ace-Pinyin-Global mode if ARG is positive;
-otherwise, disable it.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.
-Enable the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
 
 Ace-Pinyin mode is enabled in all buffers where
 `turn-on-ace-pinyin-mode' would do it.
-
 See `ace-pinyin-mode' for more information on Ace-Pinyin mode.
 
 \(fn &optional ARG)" t nil)
@@ -74,7 +61,7 @@ Turn on `ace-pinyin-mode'." t nil)
 (autoload 'turn-off-ace-pinyin-mode "ace-pinyin" "\
 Turn off `ace-pinyin-mode'." t nil)
 
-(register-definition-prefixes "ace-pinyin" '("ace-pinyin-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ace-pinyin" '("ace-pinyin-")))
 
 ;;;***
 

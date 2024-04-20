@@ -1,4 +1,4 @@
-;;; soft-morning-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; soft-morning-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

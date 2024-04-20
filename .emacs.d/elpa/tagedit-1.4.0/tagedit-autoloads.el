@@ -1,4 +1,4 @@
-;;; tagedit-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; tagedit-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -43,7 +43,7 @@
 
 (autoload 'tagedit-raise-tag "tagedit" nil t nil)
 
-(register-definition-prefixes "tagedit" '("tagedit-" "te/"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "tagedit" '("tagedit-" "te/")))
 
 ;;;***
 

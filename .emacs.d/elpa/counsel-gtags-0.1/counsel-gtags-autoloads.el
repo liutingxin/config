@@ -1,4 +1,4 @@
-;;; counsel-gtags-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; counsel-gtags-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -48,25 +48,16 @@ by global --from-here option." t nil)
 (autoload 'counsel-gtags-mode "counsel-gtags" "\
 Toggle Counsel-Gtags mode on or off.
 
-This is a minor mode.  If called interactively, toggle the
-`Counsel-Gtags mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `counsel-gtags-mode'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Counsel-Gtags mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \\{counsel-gtags-mode-map}
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "counsel-gtags" '("counsel-gtags-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "counsel-gtags" '("counsel-gtags-")))
 
 ;;;***
 

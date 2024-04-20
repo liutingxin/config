@@ -1,4 +1,4 @@
-;;; counsel-css-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; counsel-css-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@ Set up imenu to recognize css (as well as nested scss/less selectors)." nil nil)
 (autoload 'counsel-css "counsel-css" "\
 Jump to a css selector." t nil)
 
-(register-definition-prefixes "counsel-css" '("counsel-css--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "counsel-css" '("counsel-css--")))
 
 ;;;***
 

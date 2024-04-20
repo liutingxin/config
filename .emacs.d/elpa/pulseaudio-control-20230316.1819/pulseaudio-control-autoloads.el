@@ -1,4 +1,4 @@
-;;; pulseaudio-control-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pulseaudio-control-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -23,20 +23,11 @@ or call the function `pulseaudio-control-display-mode'.")
 (autoload 'pulseaudio-control-display-mode "pulseaudio-control" "\
 Show the current sink and source information in the mode line.
 
-This is a minor mode.  If called interactively, toggle the
-`Pulseaudio-Control-Display mode' mode.  If the prefix argument
-is positive, enable the mode, and if it is zero or negative,
-disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='pulseaudio-control-display-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Pulseaudio-Control-Display mode
+if ARG is positive, and disable it if ARG is zero or negative.
+If called from Lisp, also enable the mode if ARG is omitted or
+nil, and toggle it if ARG is `toggle'; disable the mode
+otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -139,21 +130,11 @@ or call the function `pulseaudio-control-default-sink-mode'.")
 (autoload 'pulseaudio-control-default-sink-mode "pulseaudio-control" "\
 Set the use of @DEFAULT_SINK@ for volume operations.
 
-This is a minor mode.  If called interactively, toggle the
-`Pulseaudio-Control-Default-Sink mode' mode.  If the prefix
-argument is positive, enable the mode, and if it is zero or
-negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value
-\\='pulseaudio-control-default-sink-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Pulseaudio-Control-Default-Sink
+mode if ARG is positive, and disable it if ARG is zero or
+negative.  If called from Lisp, also enable the mode if ARG is
+omitted or nil, and toggle it if ARG is `toggle'; disable the
+mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -170,25 +151,15 @@ or call the function `pulseaudio-control-default-source-mode'.")
 (autoload 'pulseaudio-control-default-source-mode "pulseaudio-control" "\
 Set the use of @DEFAULT_SOURCE@ for volume operations.
 
-This is a minor mode.  If called interactively, toggle the
-`Pulseaudio-Control-Default-Source mode' mode.  If the prefix
-argument is positive, enable the mode, and if it is zero or
-negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value
-\\='pulseaudio-control-default-source-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Pulseaudio-Control-Default-Source
+mode if ARG is positive, and disable it if ARG is zero or
+negative.  If called from Lisp, also enable the mode if ARG is
+omitted or nil, and toggle it if ARG is `toggle'; disable the
+mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "pulseaudio-control" '("pulseaudio-control-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pulseaudio-control" '("pulseaudio-control-")))
 
 ;;;***
 

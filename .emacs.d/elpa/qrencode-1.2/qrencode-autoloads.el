@@ -1,4 +1,4 @@
-;;; qrencode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; qrencode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -17,7 +17,7 @@ Encode region between BEG and END into a QR code and show in a buffer.
 (autoload 'qrencode-url-at-point "qrencode" "\
 Encode any URL found at point." t nil)
 
-(register-definition-prefixes "qrencode" '("qrencode"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "qrencode" '("qrencode")))
 
 ;;;***
 

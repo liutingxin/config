@@ -1,4 +1,4 @@
-;;; queue-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; queue-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,11 @@
 (defalias 'make-queue 'queue-create "\
 Create an empty queue data structure.")
 
-(register-definition-prefixes "queue" '("queue"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "queue" '("queue")))
+
+;;;***
+
+;;;### (autoloads nil nil ("queue-pkg.el") (0 0 0 0))
 
 ;;;***
 

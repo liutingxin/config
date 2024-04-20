@@ -1,4 +1,4 @@
-;;; native-complete-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; native-complete-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -22,7 +22,7 @@ emulator." nil nil)
 
 (autoload 'native-complete-check-config "native-complete" nil t nil)
 
-(register-definition-prefixes "native-complete" '("native-complete-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "native-complete" '("native-complete-")))
 
 ;;;***
 

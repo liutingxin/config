@@ -1,4 +1,4 @@
-;;; pyim-wbdict-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pyim-wbdict-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

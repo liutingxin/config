@@ -1,4 +1,4 @@
-;;; flatland-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; flatland-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -14,7 +14,7 @@
 
 (add-to-list 'safe-local-eval-forms '(when (require 'rainbow-mode nil t) (rainbow-mode 1)))
 
-(register-definition-prefixes "flatland-theme" '("flatland"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flatland-theme" '("flatland")))
 
 ;;;***
 

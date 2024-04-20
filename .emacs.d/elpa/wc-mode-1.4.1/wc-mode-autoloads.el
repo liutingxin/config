@@ -1,4 +1,4 @@
-;;; wc-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; wc-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -14,19 +14,10 @@ Toggle wc mode With no argument, this command toggles the
 mode.  Non-null prefix argument turns on the mode.  Null prefix
 argument turns off the mode.
 
-This is a minor mode.  If called interactively, toggle the `Wc
-mode' mode.  If the prefix argument is positive, enable the mode,
-and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `wc-mode'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Wc mode if ARG is positive, and
+disable it if ARG is zero or negative.  If called from Lisp, also
+enable the mode if ARG is omitted or nil, and toggle it if ARG is
+`toggle'; disable the mode otherwise.
 
 When Wc mode is enabled on a buffer, it counts the current words
 in the buffer and keeps track of a differential of added or
@@ -44,7 +35,7 @@ value is non-nil.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "wc-mode" 'nil)
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "wc-mode" 'nil))
 
 ;;;***
 

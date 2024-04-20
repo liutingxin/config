@@ -1,4 +1,4 @@
-;;; sage-shell-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; sage-shell-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -27,7 +27,7 @@ Move to end of block sent." t nil)
 (autoload 'sage-shell-blocks:pull-next "sage-shell-blocks" "\
 Evaluate the next block of the last visited file in Sage mode." t nil)
 
-(register-definition-prefixes "sage-shell-blocks" '("sage-shell-blocks:"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sage-shell-blocks" '("sage-shell-blocks:")))
 
 ;;;***
 
@@ -102,7 +102,7 @@ exisiting Sage process.
 
 (autoload 'sage-shell-sagetex:run-latex-and-load-current-file "sage-shell-mode" nil t nil)
 
-(register-definition-prefixes "sage-shell-mode" '("sage-shell"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sage-shell-mode" '("sage-shell")))
 
 ;;;***
 
@@ -113,19 +113,10 @@ exisiting Sage process.
 (autoload 'sage-shell-view-mode "sage-shell-view" "\
 Toggle automatic typesetting of Sage output.
 
-This is a minor mode.  If called interactively, toggle the
-`Sage-Shell-View mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `sage-shell-view-mode'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Sage-Shell-View mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 Typesetting of math formulas is done by LATEX subprocesses and
 PDF to PNG conversions.
@@ -152,7 +143,7 @@ Toggle inline plotting of graphs in `sage-shell-mode' buffer.
 
 \(fn &optional (VERBOSE t))" t nil)
 
-(register-definition-prefixes "sage-shell-view" '("sage-shell-view-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sage-shell-view" '("sage-shell-view-")))
 
 ;;;***
 

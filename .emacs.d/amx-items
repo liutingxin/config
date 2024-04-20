@@ -2,53 +2,16 @@
 ;; ----- amx-history -----
 (
  restart-emacs
- comint-run
- compile
- eshell
- magit
- git-gutter:toggle
- c-mode
+ package-install
+ cd
+ 5x5
+ amx
+ arp
+ dbx
 )
 
 ;; ----- amx-data -----
 (
- (compile . 242)
- (my-random-favorite-color-theme . 1)
- (c-mode . 17)
- (counsel-etags-scan-code . 1)
- (counsel-etags-find-tag-at-point . 2)
- (company-mode . 2)
- (my-toggle-typewriter . 2)
- (list-packages . 1)
- (package-refresh-contents . 8)
- (flyspell-word . 1)
- (flyspell-correct-word . 1)
- (list-colors-display . 1)
- (ispell-word . 4)
- (package-install . 17)
- (package-list-packages . 5)
- (cnfonts-edit-profile . 1)
- (org-mode . 2)
- (org-info . 1)
- (restart-emacs . 57)
- (benchmark-init/show-durations-tree . 5)
- (refresh-all-packages . 1)
- (dap-mode . 1)
- (benchmark-init/activate . 1)
- (benchmark-init/show-durations-tabulated . 5)
- (eshell . 20)
- (comint-run . 229)
- (emacs-init-time . 1)
- (kill-line . 1)
- (mkdir . 4)
- (gdb . 2)
- (text-mode . 2)
- (browse-url-chromium . 1)
- (browse-web . 3)
- (pop-global-mark . 1)
- (make-directory . 1)
- (find-function . 1)
- (git-gutter:toggle . 2)
- (magit . 2)
- (magit-help . 1)
+ (package-install . 3)
+ (restart-emacs . 6)
 )

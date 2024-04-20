@@ -1,4 +1,4 @@
-;;; async-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; async-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -90,7 +90,7 @@ returns nil.  It can still be useful, however, as an argument to
 
 \(fn START-FUNC &optional FINISH-FUNC)" nil nil)
 
-(register-definition-prefixes "async" '("async-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "async" '("async-")))
 
 ;;;***
 
@@ -119,20 +119,10 @@ Byte compile asynchronously packages installed with package.el.
 Async compilation of packages can be controlled by
 `async-bytecomp-allowed-packages'.
 
-This is a minor mode.  If called interactively, toggle the
-`Async-Bytecomp-Package mode' mode.  If the prefix argument is
-positive, enable the mode, and if it is zero or negative, disable
-the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='async-bytecomp-package-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Async-Bytecomp-Package mode if
+ARG is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -143,14 +133,14 @@ Same as `byte-compile-file' but asynchronous.
 
 \(fn FILE)" t nil)
 
-(register-definition-prefixes "async-bytecomp" '("async-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "async-bytecomp" '("async-")))
 
 ;;;***
 
 ;;;### (autoloads nil "async-test" "async-test.el" (0 0 0 0))
 ;;; Generated autoloads from async-test.el
 
-(register-definition-prefixes "async-test" '("async-test-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "async-test" '("async-test-")))
 
 ;;;***
 
@@ -170,19 +160,10 @@ or call the function `dired-async-mode'.")
 (autoload 'dired-async-mode "dired-async" "\
 Do dired actions asynchronously.
 
-This is a minor mode.  If called interactively, toggle the
-`Dired-Async mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='dired-async-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Dired-Async mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -206,7 +187,7 @@ Run ‘dired-do-rename’ asynchronously.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "dired-async" '("dired-async-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dired-async" '("dired-async-")))
 
 ;;;***
 
@@ -214,7 +195,7 @@ Run ‘dired-do-rename’ asynchronously.
 ;;;;;;  0))
 ;;; Generated autoloads from smtpmail-async.el
 
-(register-definition-prefixes "smtpmail-async" '("async-smtpmail-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "smtpmail-async" '("async-smtpmail-")))
 
 ;;;***
 

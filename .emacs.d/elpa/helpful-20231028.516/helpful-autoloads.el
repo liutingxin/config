@@ -1,4 +1,4 @@
-;;; helpful-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; helpful-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -55,7 +55,7 @@ Show help for variable named SYMBOL.
 (autoload 'helpful-at-point "helpful" "\
 Show help for the symbol at point." t nil)
 
-(register-definition-prefixes "helpful" '("helpful-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "helpful" '("helpful-")))
 
 ;;;***
 

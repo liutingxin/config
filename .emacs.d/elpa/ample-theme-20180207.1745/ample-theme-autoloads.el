@@ -1,4 +1,4 @@
-;;; ample-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; ample-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@
 (autoload 'ample-flat-theme "ample-flat-theme" "\
 Apply the ample-flat-theme." t nil)
 
-(register-definition-prefixes "ample-flat-theme" '("ample-flat"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-flat-theme" '("ample-flat")))
 
 ;;;***
 
@@ -28,7 +28,7 @@ Apply the ample-flat-theme." t nil)
 (autoload 'ample-light-theme "ample-light-theme" "\
 Apply the ample-light-theme." t nil)
 
-(register-definition-prefixes "ample-light-theme" '("ample-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-light-theme" '("ample-light")))
 
 ;;;***
 
@@ -40,7 +40,7 @@ Apply the ample-light-theme." t nil)
 (autoload 'ample-theme "ample-theme" "\
 Apply the ample-theme." t nil)
 
-(register-definition-prefixes "ample-theme" '("ample"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-theme" '("ample")))
 
 ;;;***
 

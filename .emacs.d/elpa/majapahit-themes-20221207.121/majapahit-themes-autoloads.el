@@ -1,4 +1,4 @@
-;;; majapahit-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; majapahit-themes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from majapahit-dark-theme.el
 
-(register-definition-prefixes "majapahit-dark-theme" '("majapahit-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "majapahit-dark-theme" '("majapahit-dark")))
 
 ;;;***
 
@@ -18,7 +18,7 @@
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from majapahit-light-theme.el
 
-(register-definition-prefixes "majapahit-light-theme" '("majapahit-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "majapahit-light-theme" '("majapahit-light")))
 
 ;;;***
 
@@ -28,7 +28,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "majapahit-themes" '("create-majapahit-theme" "majapahit-theme-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "majapahit-themes" '("create-majapahit-theme" "majapahit-theme-")))
 
 ;;;***
 

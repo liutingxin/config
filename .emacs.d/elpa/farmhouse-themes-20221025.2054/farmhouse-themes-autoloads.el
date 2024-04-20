@@ -1,4 +1,4 @@
-;;; farmhouse-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; farmhouse-themes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "farmhouse-dark-theme" '("farmhouse-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "farmhouse-dark-theme" '("farmhouse-dark")))
 
 ;;;***
 
@@ -22,7 +22,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "farmhouse-light-theme" '("farmhouse-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "farmhouse-light-theme" '("farmhouse-light")))
 
 ;;;***
 
@@ -32,7 +32,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "farmhouse-themes" '("farmhouse-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "farmhouse-themes" '("farmhouse-")))
 
 ;;;***
 

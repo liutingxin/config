@@ -1,4 +1,4 @@
-;;; ample-zen-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; ample-zen-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -14,7 +14,7 @@
 
 (add-to-list 'safe-local-eval-forms '(when (require 'rainbow-mode nil t) (rainbow-mode 1)))
 
-(register-definition-prefixes "ample-zen-theme" '("ample-zen"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ample-zen-theme" '("ample-zen")))
 
 ;;;***
 

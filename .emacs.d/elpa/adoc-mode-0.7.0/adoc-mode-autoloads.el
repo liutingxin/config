@@ -1,4 +1,4 @@
-;;; adoc-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; adoc-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -17,7 +17,7 @@ Turning on Adoc mode runs the normal hook `adoc-mode-hook'.
 
 (add-to-list 'auto-mode-alist '("\\.a\\(?:scii\\)?doc\\'" . adoc-mode))
 
-(register-definition-prefixes "adoc-mode" '("adoc-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "adoc-mode" '("adoc-")))
 
 ;;;***
 

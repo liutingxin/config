@@ -1,4 +1,4 @@
-;;; omtose-phellack-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; omtose-phellack-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "omtose-darker-theme" '("omtose-darker"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "omtose-darker-theme" '("omtose-darker")))
 
 ;;;***
 
@@ -22,7 +22,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "omtose-softer-theme" '("omtose-softer"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "omtose-softer-theme" '("omtose-softer")))
 
 ;;;***
 

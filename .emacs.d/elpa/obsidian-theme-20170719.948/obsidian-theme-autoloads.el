@@ -1,4 +1,4 @@
-;;; obsidian-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; obsidian-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

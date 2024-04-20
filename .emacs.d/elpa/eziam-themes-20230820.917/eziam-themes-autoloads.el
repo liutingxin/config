@@ -1,4 +1,4 @@
-;;; eziam-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; eziam-themes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "eziam-dark-theme" '("eziam-dark"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eziam-dark-theme" '("eziam-dark")))
 
 ;;;***
 
@@ -22,7 +22,7 @@
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "eziam-dusk-theme" '("eziam-dusk"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eziam-dusk-theme" '("eziam-dusk")))
 
 ;;;***
 
@@ -32,14 +32,14 @@
 
 (and load-file-name (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "eziam-light-theme" '("eziam-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eziam-light-theme" '("eziam-light")))
 
 ;;;***
 
 ;;;### (autoloads nil "eziam-themes" "eziam-themes.el" (0 0 0 0))
 ;;; Generated autoloads from eziam-themes.el
 
-(register-definition-prefixes "eziam-themes" '("eziam-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eziam-themes" '("eziam-")))
 
 ;;;***
 

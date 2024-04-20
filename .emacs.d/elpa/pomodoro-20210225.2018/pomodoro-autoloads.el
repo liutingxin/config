@@ -1,4 +1,4 @@
-;;; pomodoro-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; pomodoro-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -14,7 +14,7 @@
 
 \(fn ARG)" t nil)
 
-(register-definition-prefixes "pomodoro" '("play-pomodoro-" "pomodoro-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "pomodoro" '("play-pomodoro-" "pomodoro-")))
 
 ;;;***
 

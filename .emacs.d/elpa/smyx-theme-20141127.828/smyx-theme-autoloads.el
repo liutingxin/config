@@ -1,4 +1,4 @@
-;;; smyx-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; smyx-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -11,7 +11,7 @@
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "smyx-theme" '("smyx"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "smyx-theme" '("smyx")))
 
 ;;;***
 

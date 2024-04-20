@@ -1,4 +1,4 @@
-;;; elisp-refs-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; elisp-refs-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -55,7 +55,7 @@ search.
 
 \(fn SYMBOL &optional PATH-PREFIX)" t nil)
 
-(register-definition-prefixes "elisp-refs" '("elisp-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "elisp-refs" '("elisp-")))
 
 ;;;***
 

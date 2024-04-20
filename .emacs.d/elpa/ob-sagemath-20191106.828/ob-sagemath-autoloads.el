@@ -1,4 +1,4 @@
-;;; ob-sagemath-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; ob-sagemath-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -20,7 +20,7 @@ buffer.
 
 \(fn BODY PARAMS)" nil nil)
 
-(register-definition-prefixes "ob-sagemath" '("ob-sagemath-" "org-babel-header-args:sage"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ob-sagemath" '("ob-sagemath-" "org-babel-header-args:sage")))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; eww-lnum-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; eww-lnum-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -24,7 +24,7 @@ Turn on link numbers, ask for one and offer actions over it depending on selecti
 Actions may be selected either by hitting corresponding key,
 pressing <return> over the action line or left clicking." t nil)
 
-(register-definition-prefixes "eww-lnum" '("eww-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eww-lnum" '("eww-")))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; seq-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; seq-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -9,14 +9,14 @@
 ;;;### (autoloads nil "seq-24" "seq-24.el" (0 0 0 0))
 ;;; Generated autoloads from seq-24.el
 
-(register-definition-prefixes "seq-24" '("seq"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "seq-24" '("seq")))
 
 ;;;***
 
 ;;;### (autoloads nil "seq-25" "seq-25.el" (0 0 0 0))
 ;;; Generated autoloads from seq-25.el
 
-(register-definition-prefixes "seq-25" '("seq--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "seq-25" '("seq--")))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; fantom-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; fantom-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; jump-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; jump-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -38,7 +38,7 @@ find the current method which defaults to `which-function'.
 
 \(fn NAME SPECS ROOT &optional DOC MAKE METHOD-COMMAND)" nil t)
 
-(register-definition-prefixes "jump" '("jump-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "jump" '("jump-")))
 
 ;;;***
 

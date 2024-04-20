@@ -9,11 +9,13 @@
 (setq-default mode-line-format
   (list
     ;; the buffer name
-   "%b"
+   ":%b"
 
     ;; line and column
-   ;; '%02' to set to 2 chars at least; prevents flickering
-    "(%02l,%01c)"
+    ; '%02' to set to 2 chars at least; prevents flickering
+    ;"(%02l,%01c)"
+    ; '%01' to set to 2 chars at least; prevents flickering
+    "(%01l,%01c)"
 
     "["
 
@@ -42,6 +44,34 @@
     ;; is this buffer read-only?
     '(:eval (and buffer-read-only
                  (propertize "R" 'face nil 'help-echo "Buffer is read-only")))
+;;     "] "
+
+;;     ;;Magit display current branch
+;;     ;; 新增显示当前 Git 分支的段落
+;;     ;
+;;     '(:eval (when (and (magit-toplevel) (my-git-get-current-branch))
+;;                                         ;(format " {Branch:%s} " (magit-get-current-branch))
+;;               (format " Branch:%s " (my-git-get-current-branch))))
+;;     ;;Magit end here.
+
+(defun my-magit-auto-enable ()
+  "Automatically enable Magit mode if a .git directory is found."
+  (when (and buffer-file-name
+             (file-directory-p (concat (file-name-directory buffer-file-name) ".git")))
+    (let ((current-buffer (current-buffer))) ; 保存当前 buffer
+      (magit-status)
+      (switch-to-buffer current-buffer)      ; 切换回之前的 buffer
+      (delete-other-windows))))              ; 关闭其他窗口
+
+(add-hook 'find-file-hook 'my-magit-auto-enable)
+
+    '(:eval (when (not (string-prefix-p "magit" (symbol-name major-mode)))
+              (when (and (magit-toplevel) (magit-get-current-branch))
+                (format " Branch:%s " (magit-get-current-branch)))))
+    ;; Magit end here.
+
+
+
     "] "
 
     ;; `global-mode-string' is useful because `org-timer-set-timer' uses it

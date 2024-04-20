@@ -1,4 +1,4 @@
-;;; dash-functional-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; dash-functional-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

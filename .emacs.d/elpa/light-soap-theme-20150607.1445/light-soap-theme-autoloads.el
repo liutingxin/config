@@ -1,4 +1,4 @@
-;;; light-soap-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; light-soap-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

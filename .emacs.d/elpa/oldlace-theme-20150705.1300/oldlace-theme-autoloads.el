@@ -1,4 +1,4 @@
-;;; oldlace-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; oldlace-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; lush-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; lush-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -14,7 +14,7 @@
 (autoload 'lush-theme "lush-theme" "\
 Load lush-theme." t nil)
 
-(register-definition-prefixes "lush-theme" '("lush"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lush-theme" '("lush")))
 
 ;;;***
 

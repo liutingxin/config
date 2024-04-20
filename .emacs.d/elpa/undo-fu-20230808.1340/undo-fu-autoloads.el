@@ -1,4 +1,4 @@
-;;; undo-fu-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; undo-fu-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -39,7 +39,7 @@ Optional argument ARG the number of steps to undo.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "undo-fu" '("undo-fu-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "undo-fu" '("undo-fu-")))
 
 ;;;***
 

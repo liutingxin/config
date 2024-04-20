@@ -1,4 +1,4 @@
-;;; find-file-in-project-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; find-file-in-project-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -246,7 +246,7 @@ Or else it's replaced by relative path.
 
 \(fn &optional ABSOLUTE-PATH-P)" t nil)
 
-(register-definition-prefixes "find-file-in-project" '("ffip-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "find-file-in-project" '("ffip-")))
 
 ;;;***
 

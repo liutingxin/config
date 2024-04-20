@@ -1,4 +1,4 @@
-;;; nord-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; nord-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -11,7 +11,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "nord-theme" '("nord"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "nord-theme" '("nord")))
 
 ;;;***
 

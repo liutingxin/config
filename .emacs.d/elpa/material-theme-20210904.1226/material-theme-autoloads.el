@@ -1,4 +1,4 @@
-;;; material-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; material-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -12,7 +12,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "material-light-theme" '("material-light"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "material-light-theme" '("material-light")))
 
 ;;;***
 
@@ -22,7 +22,7 @@
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
-(register-definition-prefixes "material-theme" '("material"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "material-theme" '("material")))
 
 ;;;***
 

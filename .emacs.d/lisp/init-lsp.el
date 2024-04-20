@@ -1,7 +1,5 @@
  ;;; -*- coding: utf-8; lexical-binding: t; -*-
 
-
-
  ;; Lazy load company
 (autoload 'global-company-mode "company" nil t)
 
@@ -36,6 +34,7 @@
 (add-hook 'python-mode-hook #'lsp-deferred)
 (add-hook 'rust-mode-hook #'lsp-deferred)
 (add-hook 'web-mode-hook #'lsp-deferred)
+;; (add-hook 'vue-mode-hook #'lsp-deferred)
 
 ;; Configure lsp-mode
 (setq lsp-auto-guess-root t
@@ -103,6 +102,27 @@
       company-show-quick-access t)
 
 
+;; LSP ggtags integration
+;;(require 'lsp-ggtags)
+;;(add-hook 'lsp-mode-hook #'lsp-ggtags-mode) ; 在 LSP 模式下启用 LSP ggtags 整合
 
+
+
+;; Optional: Configure company-lsp backend
+;;(require 'company-lsp)
+;;(push 'company-lsp company-backends)        ; 将 company-lsp 添加到 company 的后端列表
+
+
+;; Optional: Treemacs integration
+(require 'lsp-treemacs)
+(lsp-treemacs-sync-mode 1)                  ; 启用 LSP Treemacs 整合
+
+;; Optional: Project management with Projectile
+(require 'projectile)
+(projectile-mode)                           ; 启用 Projectile 项目管理
+
+;; Optional: Helm integration
+;;(require 'helm-lsp)
+;;(global-set-key (kbd "M-x") #'helm-lsp-workspace-symbol) ; 设置 Helm-LSP 工作空间符号的键绑定
 
  (provide 'init-lsp)

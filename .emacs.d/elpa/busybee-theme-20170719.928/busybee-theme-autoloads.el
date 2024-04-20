@@ -1,4 +1,4 @@
-;;; busybee-theme-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; busybee-theme-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
