@@ -308,7 +308,7 @@ startSpacemacs() {
     mkEmacsDir
 
     # 备份 Myemacs 配置
-    cp -r ~/.emacs.d ~/.backup/myEmacs/
+    cp -r ~/.emacs.d  ~/.backup/myEmacs/
 
     if [ $? -eq 0 ]; then
         cp -r  ~/.backup/spacemacs/.emacs.d  ~/
@@ -324,32 +324,36 @@ startSpacemacs() {
     fi
 }
 
-#function _backup() {
-#    # 检查是否存在 rsync 命令
-#    if ! which rsync &> /dev/null; then
-#        echo "Error: rsync command not found. Please install rsync before running this command."
-#        return 1
-#    fi
-#
-#    # 设置默认值，防止变量为空
-#    : ${__emacsType:=}
-#    echo $__emacsType
-#
-#    # 执行备份操作
-#    rsync -au ~/.bashrc ~/config/.bashrc
-#    rsync -au ~/.zshrc ~/config/.zshrc
-#    rsync -au ~/.spacemacs ~/config/.spacemacs
-#
-#    if [[ "$__emacsType" = Myemacs ]]; then
-#        rsync -au -delete  ~/.emacs.d/ ~/config/.emacs.d/
-#        rsync -au -delete ~/.backup/spacemacs/.emacs.d/ ~/config/.emacs.d.spacemacs/
-#    fi
-#
-#    if [[ "$__emacsType" = Spacemacs ]]; then
-#        rsync -au -delete ~/.backup/myEmacs/.emacs.d/ ~/config/.emacs.d/
-#        rsync -au -delete ~/.emacs.d/ ~/config/.emacs.d.spacemacs/
-#    fi
-#}
+function _backup() {
+    # 检查是否存在 rsync 命令
+    if ! which rsync &> /dev/null; then
+        echo "Error: rsync command not found. Please install rsync before running this command."
+        return 1
+    fi
+
+    # 设置默认值，防止变量为空
+    : ${__emacsType:=}
+    echo $__emacsType
+
+    # 执行备份操作
+    rsync -u ~/.bashrc ~/config/.bashrc
+    rsync -u ~/.zshrc ~/config/.zshrc
+    rsync -u ~/.spacemacs ~/config/.spacemacs
+
+    if [[ "$__emacsType" = Myemacs ]]; then
+        rsync -u -delete  ~/.emacs.d/ ~/config/.emacs.d/
+        rsync -u -delete ~/.backup/spacemacs/.emacs.d/ ~/config/.emacs.d.spacemacs/
+        echo "backup  emacs successfully"
+    fi
+
+    if [[ "$__emacsType" = Spacemacs ]]; then
+        rsync -u -delete ~/.backup/myEmacs/.emacs.d/ ~/config/.emacs.d/
+        rsync -u -delete ~/.emacs.d/ ~/config/.emacs.d.spacemacs/
+        echo "backup  emacs successfully"
+    fi
+    
+    echo "done..."
+}
 
 
 function _readTest() {
