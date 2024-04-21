@@ -70,7 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
+plugins=(
+         git
          zsh-syntax-highlighting 
          #alias-tips 
          zsh-autosuggestions 
@@ -152,24 +153,24 @@ esac
 #unset color_prompt force_color_prompt
 
 ######## This config can be work only in zsh
-if [[ -n "$force_color_prompt" ]]; then
-    if command -v tput >/dev/null && tput setaf 1 >/dev/null 2>&1; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
-        color_prompt=yes
-    else
-        color_prompt=
-    fi
-fi
-
-if [[ "$color_prompt" = yes ]]; then
-    PS1='${debian_chroot:+($debian_chroot)}%F{green}%n@%m%f:%F{blue}%~%f\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}%n@%m:%~\$ '
-fi
-
-unset color_prompt force_color_prompt
+#if [[ -n "$force_color_prompt" ]]; then
+#    if command -v tput >/dev/null && tput setaf 1 >/dev/null 2>&1; then
+#        # We have color support; assume it's compliant with Ecma-48
+#        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+#        # a case would tend to support setf rather than setaf.)
+#        color_prompt=yes
+#    else
+#        color_prompt=
+#    fi
+#fi
+#
+#if [[ "$color_prompt" = yes ]]; then
+#    PS1='${debian_chroot:+($debian_chroot)}%F{green}%n@%m%f:%F{blue}%~%f\$ '
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}%n@%m:%~\$ '
+#fi
+#
+#unset color_prompt force_color_prompt
 
 
 
@@ -280,7 +281,7 @@ mkEmacsDir(){
     fi
 }
 
-__emacsType=
+export __emacsType=
 
 startMyemacs()
 {
@@ -303,7 +304,7 @@ startMyemacs()
 
     if [ $? -eq 0 ]; then
         echo "change emacs successfully"
-        __emacsType=Myemacs
+        export  __emacsType=Myemacs
     else
         return 128
     fi
@@ -329,7 +330,7 @@ startSpacemacs()
     
     if [ $? -eq 0 ]; then
         echo "change emacs successfully"
-        __emacsType=Spacemacs
+        export __emacsType=Spacemacs
     else
         return 128
     fi
@@ -345,12 +346,17 @@ function _backup(){
 # if [[ "$color_prompt" = yes ]]; then
     if [[ "$__emacsType" = Myemacs ]]; then
         echo "Current emacs is Myemacs, so I will save current config to ~/config/.emacs.d"
-
+        
+        cp -r ~/.emacs.d/ ~/config/
+        cp -r ~/.backup/spacemacs/.emacs.d  ~/config/.emacs.d.spacemacs
     fi
+
 
     if [[ "$__emacsType" = Spacemacs ]]; then
         echo "Current emacs is Spacemacs, so I will save current config to ~/config/.emacs.d.spacemacs"
 
+        cp -r ~/.emacs.d/ ~/config/.emacs.d.spacemacs
+        cp -r ~/.backup/myEmacs/.emacs.d  ~/config/
     fi
 
 }
