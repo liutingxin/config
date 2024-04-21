@@ -280,20 +280,15 @@ mkEmacsDir(){
     fi
 }
 
+
+
 export __emacsType=
 
-startMyemacs()
-{
+startMyemacs() {
     mkEmacsDir
 
-    #if [ ! -d ~/.emacs.d/  ]; then
-    #    echo "change emacs pause, not exist ~/.emacs.d/"
-    #    return 128
-	#return
-    #fi
-
-
-    cp -r  ~/.emacs.d ~/.backup/spacemacs/ 
+    # 备份 Spacemacs 配置
+    cp -r  ~/.emacs.d ~/.backup/spacemacs/
 
     if [ $? -eq 0 ]; then
         cp -r  ~/.backup/myEmacs/.emacs.d  ~/
@@ -302,62 +297,55 @@ startMyemacs()
     fi
 
     if [ $? -eq 0 ]; then
-        echo "change emacs successfully"
-        export  __emacsType=Myemacs
+        echo "Change emacs successfully"
+        export __emacsType=Myemacs
     else
         return 128
     fi
 }
 
-startSpacemacs()
-{
+startSpacemacs() {
     mkEmacsDir
 
-    #if [ ! -d ~/.emacs.d/  ]; then
-    #    echo "change emacs pause, not exist ~/.emacs.d/"
-    #    return 128
-    #fi
-
-    cp -r ~/.emacs.d ~/.backup/myEmacs/ 
-
+    # 备份 Myemacs 配置
+    cp -r ~/.emacs.d ~/.backup/myEmacs/
 
     if [ $? -eq 0 ]; then
         cp -r  ~/.backup/spacemacs/.emacs.d  ~/
     else
         return 128
-     fi
-    
+    fi
+
     if [ $? -eq 0 ]; then
-        echo "change emacs successfully"
+        echo "Change emacs successfully"
         export __emacsType=Spacemacs
     else
         return 128
     fi
 }
 
-
 function _backup() {
-
-    if  ! which rsync &> /dev/null ; then
+    # 检查是否存在 rsync 命令
+    if ! which rsync &> /dev/null; then
         echo "Error: rsync command not found. Please install rsync before running this command."
         return 1
     fi
 
+    # 设置默认值，防止变量为空
+    : ${__emacsType:=}
+
+    # 执行备份操作
     rsync -au ~/.bashrc ~/config/.bashrc
     rsync -au ~/.zshrc ~/config/.zshrc
     rsync -au ~/.spacemacs ~/config/.spacemacs
 
     if [[ "$__emacsType" = Myemacs ]]; then
-
         rsync -au -delete  ~/.emacs.d/ ~/config/.emacs.d/
-
         rsync -au -delete ~/.backup/spacemacs/.emacs.d/ ~/config/.emacs.d.spacemacs/
     fi
 
     if [[ "$__emacsType" = Spacemacs ]]; then
-
         rsync -au -delete ~/.backup/myEmacs/.emacs.d/ ~/config/.emacs.d/
-
         rsync -au -delete ~/.emacs.d/ ~/config/.emacs.d.spacemacs/
     fi
 }
