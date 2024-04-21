@@ -623,7 +623,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  (setq-default scroll-margin 4);;My add config: scroll marin set 4 lines.
+  (setq-default scroll-margin 5);;My add config: scroll marin set 4 lines.
 )
 
 
