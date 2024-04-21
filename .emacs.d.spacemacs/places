@@ -1,0 +1,7 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/cam/.emacs.d/"
+  (dired-filename . "/home/cam/.emacs.d/init.el"))
+ ("/home/cam/.vim/vimrc" . 184)
+ ("/home/cam/.emacs.d/lisp/init-modeline.el" . 2323)
+ ("/home/cam/.emacs.d/init.el" . 2021)
+ ("/home/cam/.emacs.d/lisp/init-theme.el" . 309))

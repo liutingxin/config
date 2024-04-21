@@ -1,0 +1,16 @@
+;;; -*- coding: utf-8; -*-
+;;; Automatically generated on Sat Apr 20 02:52:46 2024
+;;; Invoked by cam@AE using 27.1
+(setq-default kill-ring '(";"))
+(setq-default session-file-alist '(("~/.emacs.d/init.el" 6295 6110 1 nil nil 6295 (overwrite-mode))))
+(setq-default file-name-history '("~/.emacs.d/init.el"))
+(setq-default regexp-search-ring '("isp"))
+(setq-default amx-history '(restart-emacs package-install cd 5x5 amx arp dbx))
+(setq-default command-history '((restart-emacs nil)))
+(setq-default counsel-M-x-history '("^res" "restart-emacs" "^r" "^restart-emacs" "^rest" "package-install"))
+(setq-default counsel-git-grep-cmd-history '("git --no-pager grep -n --no-color -I -e \"%s\""))
+(setq-default evil-ex-history '("w"))
+(setq-default evil-repeat-ring (session-make-ring 10 '(([120]) ([105 59 escape]) ([134217848]) ([105 58 127 escape]))))
+(setq-default evil-search-forward-history '("isp"))
+(setq-default my-search-text-history '("isp"))
+(setq-default occur-collect-regexp-history '("\\1"))
