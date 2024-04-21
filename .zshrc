@@ -186,6 +186,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
+source /usr/share/nvm/init-nvm.sh
+
 # some more ls aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -278,6 +280,8 @@ mkEmacsDir(){
     fi
 }
 
+__emacsType=
+
 startMyemacs()
 {
     mkEmacsDir
@@ -299,6 +303,7 @@ startMyemacs()
 
     if [ $? -eq 0 ]; then
         echo "change emacs successfully"
+        __emacsType=Myemacs
     else
         return 128
     fi
@@ -324,9 +329,33 @@ startSpacemacs()
     
     if [ $? -eq 0 ]; then
         echo "change emacs successfully"
+        __emacsType=Spacemacs
     else
         return 128
     fi
 }
 
-source /usr/share/nvm/init-nvm.sh
+
+function _backup(){
+    cp ~/.bashrc ~/config/
+    cp ~/.zshrc ~/config/
+    cp ~/.spacemacs ~/config/
+
+
+# if [[ "$color_prompt" = yes ]]; then
+    if [[ "$__emacsType" = Myemacs ]]; then
+        echo "Current emacs is Myemacs, so I will save current config to ~/config/.emacs.d"
+
+    fi
+
+    if [[ "$__emacsType" = Spacemacs ]]; then
+        echo "Current emacs is Spacemacs, so I will save current config to ~/config/.emacs.d.spacemacs"
+
+    fi
+
+}
+
+function _readTest() {
+    read flag
+    echo "get falg: $flag"
+}

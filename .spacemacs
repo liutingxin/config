@@ -43,20 +43,51 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     ;; lsp
-     multiple-cursors
-     ;org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     spell-checking
+     lsp
+
+     ;; ivy
+     (lsp :variables
+          lsp-lens-enable t
+          lsp-use-lsp-ui t)
+
+     (c-c++ :variables
+            c-c++-backend 'lsp-clangd
+            c-c++-lsp-enable-semantic-highlight 'rainbow
+            c-c++-enable-clang-format-on-save t
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-google-style t
+            c-c++-enable-clang-format-on-save t
+            c-c++-dap-adapters '(dap-lldb dap-cpptools) ;;@https://develop.spacemacs.org/layers/+lang/c-c++/README.html#lsp Install Debugger support，--> M-x dap-cpptools-setup
+            c-c++-adopt-subprojects t)
+
+      
 
      (spell-checking :variables spell-checking-enable-by-default nil)
 
      syntax-checking
      version-control
-     treemacs)
+     (treemacs :variables
+               ;; treemacs-use-follow-mode 'tag ;; alse can be set 'tag
+               ;; treemacs-use-filewatch-mode t
+               treemacs-use-git-mode 'deferred
+               treemacs-collapse-dirs 3
+               treemacs-lock-width t
+               treemacs-width 20
+               treemacs-indent-guide-style 'line
+               ;; treemacs-use-all-the-icons-theme t
+               ;; treemacs-use-icons-dired t
+               treemacs-load-theme 'Default
+               )
 
+     
+     ;;@at https://developer.spotify.com/dashboard to set id and secret
+     ;;@at https://develop.spacemacs.org/layers/+music/spotify/README.html to set spotify layers
+     (spotify :variables
+               counsel-spotify-client-id '93524362b3ec4602a29193a68eb086a0
+               counsel-spotify-client-secret '0d97ec8b93a64e61b8987bf77ecef4b3
+               )
+     
+     )
 
    ;; List of additional packages that will be installed without being wrapped
    ;; in a layer (generally the packages are installed only and should still be
@@ -184,6 +215,7 @@ It should only modify the values of Spacemacs settings."
    ;;dotspacemacs-startup-banner 'official
    ;;dotspacemacs-startup-banner 'random;;My add config
    dotspacemacs-startup-banner '998;My add config
+   ;; dotspacemacs-startup-banner 'random;My add config
 
    ;; Scale factor controls the scaling (size) of the startup banner. Default
    ;; value is `auto' for scaling the logo automatically to fit all buffer
@@ -590,6 +622,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  (setq-default scroll-margin 4);;My add config: scroll marin set 4 lines.
 )
 
 
@@ -606,7 +640,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auto-dictionary auto-yasnippet browse-at-remote diff-hl flycheck-pos-tip pos-tip flyspell-correct-helm flyspell-correct helm-c-yasnippet helm-company yasnippet-snippets yasnippet evil-org git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot helm-git-grep helm-ls-git helm-org-rifle htmlize org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-project-capture org-category-capture org-rich-yank orgit-forge orgit forge yaml ghub closql emacsql treepy smeargle treemacs-magit magit magit-section git-commit with-editor transient company emoji-cheat-sheet-plus gh-md markdown-mode valign vmd-mode monokai-theme farmhouse-themes ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-comint helm-ag google-translate golden-ratio flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
+   '(helm-rtags helm-spotify-plus multi helm wfnames helm-core counsel-projectile counsel counsel-spotify flyspell-correct-ivy ivy-avy ivy-hydra ivy-purpose ivy-rtags ivy-xref ivy-yasnippet lsp-ivy smex swiper ivy wgrep treemacs-all-the-icons helm-lsp lsp-origami origami lsp-treemacs lsp-ui lsp-mode auto-dictionary auto-yasnippet browse-at-remote diff-hl flycheck-pos-tip pos-tip flyspell-correct-helm flyspell-correct helm-c-yasnippet helm-company yasnippet-snippets yasnippet evil-org git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot helm-git-grep helm-ls-git helm-org-rifle htmlize org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-project-capture org-category-capture org-rich-yank orgit-forge orgit forge yaml ghub closql emacsql treepy smeargle treemacs-magit magit magit-section git-commit with-editor transient company emoji-cheat-sheet-plus gh-md markdown-mode valign vmd-mode monokai-theme farmhouse-themes ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-comint helm-ag google-translate golden-ratio flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
