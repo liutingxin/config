@@ -70,8 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-         git
+plugins=(git
          zsh-syntax-highlighting 
          #alias-tips 
          zsh-autosuggestions 
@@ -169,8 +168,8 @@ esac
 #else
 #    PS1='${debian_chroot:+($debian_chroot)}%n@%m:%~\$ '
 #fi
-#
-#unset color_prompt force_color_prompt
+
+unset color_prompt force_color_prompt
 
 
 
@@ -337,29 +336,32 @@ startSpacemacs()
 }
 
 
-function _backup(){
-    cp ~/.bashrc ~/config/
-    cp ~/.zshrc ~/config/
-    cp ~/.spacemacs ~/config/
+function _backup() {
 
-
-# if [[ "$color_prompt" = yes ]]; then
-    if [[ "$__emacsType" = Myemacs ]]; then
-        echo "Current emacs is Myemacs, so I will save current config to ~/config/.emacs.d"
-        
-        cp -r ~/.emacs.d/ ~/config/
-        cp -r ~/.backup/spacemacs/.emacs.d  ~/config/.emacs.d.spacemacs
+    if  ! which rsync &> /dev/null ; then
+        echo "Error: rsync command not found. Please install rsync before running this command."
+        return 1
     fi
 
+    rsync -au ~/.bashrc ~/config/.bashrc
+    rsync -au ~/.zshrc ~/config/.zshrc
+    rsync -au ~/.spacemacs ~/config/.spacemacs
+
+    if [[ "$__emacsType" = Myemacs ]]; then
+
+        rsync -au -delete  ~/.emacs.d/ ~/config/.emacs.d/
+
+        rsync -au -delete ~/.backup/spacemacs/.emacs.d/ ~/config/.emacs.d.spacemacs/
+    fi
 
     if [[ "$__emacsType" = Spacemacs ]]; then
-        echo "Current emacs is Spacemacs, so I will save current config to ~/config/.emacs.d.spacemacs"
 
-        cp -r ~/.emacs.d/ ~/config/.emacs.d.spacemacs
-        cp -r ~/.backup/myEmacs/.emacs.d  ~/config/
+        rsync -au -delete ~/.backup/myEmacs/.emacs.d/ ~/config/.emacs.d/
+
+        rsync -au -delete ~/.emacs.d/ ~/config/.emacs.d.spacemacs/
     fi
-
 }
+
 
 function _readTest() {
     read flag
