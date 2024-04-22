@@ -172,6 +172,15 @@ esac
 unset color_prompt force_color_prompt
 
 
+## set man color: @see at https://blog.51cto.com/wuyunncu/1709586
+#export LESS_TERMCAP_mb=$'\E[01;31m'
+#export LESS_TERMCAP_md=$'\E[01;31m'
+#export LESS_TERMCAP_me=$'\E[0m'
+#export LESS_TERMCAP_se=$'\E[0m'
+#export LESS_TERMCAP_so=$'\E[01;44;33m'
+#export LESS_TERMCAP_ue=$'\E[0m'
+#export LESS_TERMCAP_us=$'\E[01;32m'
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -266,15 +275,74 @@ function _unsetProxy(){
 
 
 # cmake settings
-_cmake(){
-	
-    if [ ! -d ./build  ]; then
-        mkdir ./build
-    fi
+#_cmake(){
+#	
+#    if [ ! -d ./build  ]; then
+#        mkdir ./build
+#    fi
+#
+#    cd ./build && cmake ..
+#}
 
-    cd ./build && cmake ..
+
+# cmake settings
+_cmake_bin(){
+	
+    echo "This command is read for Spacemacs to run cmake：当前目录下有一个CmakeList.txt文件，然后在当前目录下执行该命令后，会自动在当前目录下创建一个build目录，然后进入并执行cmake命令"
+
+    echo "I will create _cmake file to /usr/bin/_cmake, if _cmake file not exist /usr/bin/_cmake"
+    if [ ! -f /usr/bin/_cmake  ]; then
+        touch /usr/bin/_cmake
+
+        chmod 755 /usr/bin/_cmake
+
+        echo "if [ ! -d ./build  ]; then  mkdir ./build  fi" >> /usr/bin/_cmake 
+        echo "cd ./build && cmake .." >> /usr/bin/_cmake 
+
+    fi
+    
 }
 
+
+#function man()
+#{
+#    env \
+#    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+#    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+#    LESS_TERMCAP_me=$(printf "\e[0m") \
+#    LESS_TERMCAP_se=$(printf "\e[0m") \
+#    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+#    LESS_TERMCAP_ue=$(printf "\e[0m") \
+#    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+#    # echo "man settings....."
+#    man "$@"
+#}
+
+#man() {
+#    env \
+#    LESS_TERMCAP_mb=$'\e[1;31m' \
+#    LESS_TERMCAP_md=$'\e[1;31m' \
+#    LESS_TERMCAP_me=$'\e[0m' \
+#    LESS_TERMCAP_se=$'\e[0m' \
+#    LESS_TERMCAP_so=$'\e[1;44;33m' \
+#    LESS_TERMCAP_ue=$'\e[0m' \
+#    LESS_TERMCAP_us=$'\e[1;32m' \
+#    man "$@"
+#}
+
+man() {
+    export TERM=xterm-256color
+    env \
+    LESS_TERMCAP_mb=$'\e[1;31m' \
+    LESS_TERMCAP_md=$'\e[1;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[1;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[1;32m' \
+    LESS="-R" \
+    man "$@"
+}
 
 change_emacs=0
 

@@ -21,10 +21,11 @@ case "$TERM" in
 esac
 
 
+#### Attention pleas: current config can be work only in the bash shell
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -42,6 +43,32 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+#
+#if [ -n "$force_color_prompt" ]; then
+#    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+#        # We have color support; assume it's compliant with Ecma-48
+#        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+#        # a case would tend to support setf rather than setaf.)
+#        color_prompt=yes
+#    else
+#        color_prompt=
+#    fi
+#fi
+#
+#if [ "$color_prompt" = yes ]; then
+#    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#    PS1="\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\\$ "
+#else
+#    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#    PS1="\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\\$ "
+#fi
+#
+#unset color_prompt force_color_prompt
 
 
 # enable color support of ls and also add handy aliases
@@ -97,13 +124,13 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+#if ! shopt -oq posix; then
+#  if [ -f /usr/share/bash-completion/bash_completion ]; then
+#    . /usr/share/bash-completion/bash_completion
+#  elif [ -f /etc/bash_completion ]; then
+#    . /etc/bash_completion
+#  fi
+#fi
 
 
 
@@ -131,6 +158,23 @@ function _unsetProxy(){
     unset http_proxy https_proxy
     echo -e "unset Proxy"
 }
+
+
+# Set colors for man pages
+
+
+#man() {
+#    env \
+#    LESS_TERMCAP_mb=$(printf “\e[1;31m”) \
+#    LESS_TERMCAP_md=$(printf “\e[1;31m”) \
+#    LESS_TERMCAP_me=$(printf “\e[0m”) \
+#    LESS_TERMCAP_se=$(printf “\e[0m”) \
+#    LESS_TERMCAP_so=$(printf “\e[1;44;33m”) \
+#    LESS_TERMCAP_ue=$(printf “\e[0m”) \
+#    LESS_TERMCAP_us=$(printf “\e[1;32m”) \
+#    man “$@”
+#}
+
 
 
 change_emacs=0
