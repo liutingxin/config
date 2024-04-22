@@ -265,6 +265,17 @@ function _unsetProxy(){
 }
 
 
+# cmake settings
+_cmake(){
+	
+    if [ ! -d ./build  ]; then
+        mkdir ./build
+    fi
+
+    cd ./build && cmake ..
+}
+
+
 change_emacs=0
 
 mkEmacsDir(){
