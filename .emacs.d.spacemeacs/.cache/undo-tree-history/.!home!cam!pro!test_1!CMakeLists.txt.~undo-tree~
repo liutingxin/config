@@ -1,0 +1,7 @@
+(undo-tree-save-format-version . 1)
+"20f02c98b02d3724efc8485fbeb9812989c9feac"
+[nil nil nil nil (26150 12330 996556 290000) 0 nil]
+([nil nil ((#("
+" 0 1 (face font-lock-comment-face fontified nil)) . 365) (363 . 365) (362 . 364) (t 26150 11824 295372 154000)) nil (26150 12330 996551 890000) 0 nil])
+([nil current ((#(" " 0 1 (face font-lock-comment-delimiter-face fontified t)) . 364) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (t 26150 12330 995363 690000)) nil (26150 12926 452409 930000) 0 nil])
+nil

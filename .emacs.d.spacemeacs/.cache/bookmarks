@@ -1,0 +1,11 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("book_makr test a.cpp"
+ (filename . "d:/Software/Work/Emacs/a.cpp")
+ (front-context-string . "{\n  std::cout <<")
+ (rear-context-string . "am>\n\nint main()\n")
+ (position . 33)
+ (last-modified 26131 37135 20422 0))
+)

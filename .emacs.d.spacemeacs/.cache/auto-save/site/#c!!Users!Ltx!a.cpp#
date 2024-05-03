@@ -1,0 +1,8 @@
+#include <iosrteam>
+
+int main()
+
+{
+ std:cout << "st" << std::endl;
+  return 0;
+}

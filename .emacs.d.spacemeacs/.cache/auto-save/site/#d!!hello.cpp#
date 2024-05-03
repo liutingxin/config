@@ -1,0 +1,12 @@
+#include <iostream>
+
+
+usig namespace std;
+
+int main()
+
+{
+
+  cout << "HJELLOWORLD" << endl;
+  return 0;
+}

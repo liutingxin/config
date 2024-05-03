@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/Project/dishui/c/day_one/" "~/Project/boost/" "~/Project/boost_test/" "~/config/" "~/")

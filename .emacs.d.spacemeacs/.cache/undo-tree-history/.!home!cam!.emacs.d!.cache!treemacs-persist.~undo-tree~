@@ -1,0 +1,173 @@
+(undo-tree-save-format-version . 1)
+"a9db89ca4d7fe5b40c38c954c54e160db832c2e0"
+[nil nil nil nil (26148 59897 232311 442000) 0 nil]
+([nil nil ((1 . 45) (t . -1)) nil (26148 59897 232307 642000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 59897 241761 341000)) nil (26148 61386 429132 418000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 61386 421766 18000)) nil (26148 61527 988310 761000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 61527 981768 362000)) nil (26148 61880 112202 313000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 61880 111768 913000)) nil (26148 61997 490892 603000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 61997 491774 3000)) nil (26148 62580 948265 757000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26148 62580 941770 754000)) nil (26149 5287 98147 867000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26149 5287 91768 468000)) nil (26149 6672 264415 563000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26149 26219 61763 78000)) nil (26149 53702 735608 364000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26149 53702 735550 364000)) nil (26149 56161 204805 905000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26149 56161 205546 805000)) nil (26149 63087 786310 772000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26149 63087 785370 572000)) nil (26150 202 460826 147000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26150 202 455365 548000)) nil (26150 631 818326 732000) 0 nil])
+([nil nil ((1 . 45) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26150 631 815385 331000)) nil (26150 1452 45037 640000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+" . -1) (t 26150 1452 45354 340000)) nil (26150 1790 688430 138000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 1790 685373 538000)) nil (26150 2118 127531 380000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 2118 125359 380000)) nil (26150 3795 196593 296000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 3795 195347 896000)) nil (26150 4499 743211 607000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 4499 745366 907000)) nil (26150 5820 408615 265000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 5820 405374 65000)) nil (26150 8206 636374 617000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 8206 635376 817000)) nil (26150 10701 211297 864000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 10701 215373 63000)) nil (26150 12465 391206 990000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 12465 385358 790000)) nil (26150 12899 283131 732000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 12899 285364 532000)) nil (26150 15456 988175 546000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 15456 985372 247000)) nil (26150 15984 1710 792000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 15983 995372 591000)) nil (26150 43477 472079 591000) 0 nil])
+([nil nil ((1 . 81) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26150 43477 473414 991000)) nil (26151 3481 481752 390000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** test_1
+ - path :: ~/pro/test_1
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26151 3481 479975 190000)) nil (26152 61400 823672 913000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26152 61400 820659 713000)) nil (26152 62505 337952 89000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26152 62505 340689 190000)) nil (26152 65064 506544 639000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26152 65064 510668 139000)) nil (26155 51257 430767 353000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26155 51257 429482 253000)) nil (26163 2454 942091 344000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26163 2454 938477 43000)) nil (26163 2519 912567 952000) 0 nil])
+([nil nil ((1 . 47) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26163 2519 908470 941000)) nil (26163 3728 485992 519000) 0 nil])
+([nil nil ((1 . 96) ("* Default
+** boost
+ - path :: ~/Project/boost
+" . -1) (t 26163 3728 488485 19000)) nil (26163 4190 869944 514000) 0 nil])
+([nil current ((1 . 96) ("* Default
+** boost
+ - path :: ~/Project/boost
+** day_one
+ - path :: ~/Project/dishui/c/day_one
+" . -1) (t 26163 4190 868480 16000)) nil (26163 24923 818147 923000) 0 nil])
+nil
