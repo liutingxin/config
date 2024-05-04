@@ -48,7 +48,8 @@ This function should only modify configuration layer settings."
      ;; ivy
      (lsp :variables
           lsp-lens-enable t
-          lsp-use-lsp-ui t)
+          lsp-use-lsp-ui t
+          )
 
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
@@ -60,14 +61,21 @@ This function should only modify configuration layer settings."
             c-c++-dap-adapters '(dap-lldb dap-cpptools) ;;@https://develop.spacemacs.org/layers/+lang/c-c++/README.html#lsp Install Debugger support，--> M-x dap-cpptools-setup
             c-c++-adopt-subprojects t)
 
-      
+     ;;GUI
+     ;eaf
 
      (spell-checking :variables spell-checking-enable-by-default nil)
+
+     (cmake :variables
+            ;; cmake-backend 'company-cmake
+            cmake-backend 'lsp
+            cmake-enable-cmake-ide-support t
+            )
 
      syntax-checking
      version-control
      (treemacs :variables
-               ;; treemacs-use-follow-mode 'tag ;; alse can be set 'tag
+               treemacs-use-follow-mode 'tag ;; alse can be set 'tag
                ;; treemacs-use-filewatch-mode t
                treemacs-use-git-mode 'deferred
                treemacs-collapse-dirs 3
@@ -298,8 +306,9 @@ It should only modify the values of Spacemacs settings."
    ;; fixed-pitch faces. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 10.0
+   ;; dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("ttf-victor-mono-nerd"
+                               :size 16
                                :weight normal
                                :width normal)
 
@@ -624,6 +633,19 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
   (setq-default scroll-margin 5);;My add config: scroll marin set 4 lines.
+
+
+  ;; (global-set-key (kbd "SPC '") 'ansi-term)
+  (define-key evil-normal-state-map (kbd "SPC '") 'ansi-term)
+
+
+  ;;@see at https://github.com/emacs-lsp/lsp-mode/issues/2255, to slove Invalid face reference: lsp-flycheck-info-unnecessary #2255
+  (defface lsp-flycheck-info-unnecessary
+    '((t))
+    "Face which apply to side line for symbols not used.
+Possibly erroneously redundant of lsp-flycheck-info-unnecessary-face."
+    :group 'lsp-ui-sideline)
+
 )
 
 
