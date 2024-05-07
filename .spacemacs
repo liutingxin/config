@@ -74,7 +74,9 @@ This function should only modify configuration layer settings."
 
      syntax-checking
      version-control
-     (treemacs :variables
+
+     ;;neotree
+    (treemacs :variables
                treemacs-use-follow-mode 'tag ;; alse can be set 'tag
                ;; treemacs-use-filewatch-mode t
                treemacs-use-git-mode 'deferred
@@ -633,6 +635,10 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
   (setq-default scroll-margin 5);;My add config: scroll marin set 4 lines.
+
+  (setq neo-theme 'nerd)
+
+  (evil-define-key 'emacs 'global (kbd "<capslock>") 'evil-escape)
 
 
   ;; (global-set-key (kbd "SPC '") 'ansi-term)
