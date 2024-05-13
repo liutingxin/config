@@ -220,6 +220,9 @@ alias _cprc='cp ~/.bashrc ~/config/'
 alias _cpspacemacs='cp ~/.spacemacs ~/config/'
 
 
+emacs --daemon
+
+
 alias gitlog='git log --graph'
 
 
