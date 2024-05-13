@@ -8,7 +8,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="random"
+# ZSH_THEME="mira" # like
+# ZSH_THEME="gnzh" # like
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -194,8 +197,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+alias vim='nvim'
 
-source /usr/share/nvm/init-nvm.sh
+
+# source /usr/share/nvm/init-nvm.sh
 
 # some more ls aliases
 alias ls='ls --color=auto'
@@ -286,21 +291,30 @@ function _unsetProxy(){
 
 
 # cmake settings
+# Emacs 可以直接输入_cmake 命令，进行cmake编译，这样就会在当前代码目录下生产build目录，然后直接运行即可
+# 注: CmakeList与源程序在同一级目录，然后生成的程序在build目录下
 _cmake_bin(){
-	
+
     echo "This command is read for Spacemacs to run cmake：当前目录下有一个CmakeList.txt文件，然后在当前目录下执行该命令后，会自动在当前目录下创建一个build目录，然后进入并执行cmake命令"
 
-    echo "I will create _cmake file to /usr/bin/_cmake, if _cmake file not exist /usr/bin/_cmake"
-    if [ ! -f /usr/bin/_cmake  ]; then
-        touch /usr/bin/_cmake
+    echo "I will create _cmake file to /usr/bin/_cmake, if _cmake file not exist /usr/local/bin/_cmake"
 
-        chmod 755 /usr/bin/_cmake
+    touch ./_cmakebuild
 
-        echo "if [ ! -d ./build  ]; then  mkdir ./build  fi" >> /usr/bin/_cmake 
-        echo "cd ./build && cmake .." >> /usr/bin/_cmake 
+    chmod 755 ./_cmakebuild
 
-    fi
-    
+    cat << EOF > ./_cmakebuild
+#!/bin/bash
+
+if [ ! -d ./build ]; then
+    mkdir ./build
+fi
+cd ./build && cmake ..
+EOF
+
+    sudo mv ./_cmakebuild /usr/local/bin/ 
+
+    echo "I add _cmakebuild file in /usr/local/bin/_cmakebuild, please restart terminal for the new configuration to take effect "
 }
 
 
