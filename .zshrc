@@ -220,9 +220,6 @@ alias _cprc='cp ~/.bashrc ~/config/'
 alias _cpspacemacs='cp ~/.spacemacs ~/config/'
 
 
-emacs --daemon
-
-
 alias gitlog='git log --graph'
 
 
@@ -231,6 +228,9 @@ export LC_ALL="zh_CN.UTF-8"
 export LC_MESSAGES="zh_CN.UTF-8"
 export LANG="zh_CN.UTF-8"
 
+
+# 开机后自动启动emacs, 以守护进程的形式
+# emacs --daemon 在.profile文件中添加这个即可
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
