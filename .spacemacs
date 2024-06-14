@@ -32,7 +32,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(lua
+   '(python
+     lua
      markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -65,11 +66,12 @@ This function should only modify configuration layer settings."
      (lua :variables
           lua-backend 'lsp
           lua-lsp-server 'lua-language-server
-          lsp-clients-lua-language-server-bin "~/.emacs.d/.cache/lsp/lua-language-server/bin/Linux/lua-language-server" ; default path
+          ;;下面两个目录的配置需要从/usr下找找
+          ;; lsp-clients-lua-language-server-bin "~/.emacs.d/.cache/lsp/lua-language-server/bin/Linux/lua-language-server" ; default path
           ;; lsp-clients-lua-language-server-bin "/usr/bin/lua-language-server" ; default path
-          lsp-clients-lua-language-server-main-location "~/.emacs.d/.cache/lsp/lua-language-server/main.lua") ; default path
+          lsp-clients-lua-language-server-bin "/usr/bin/lua-language-server" ; default path
+          lsp-clients-lua-language-server-main-location "/usr/lib/lua-language-server/main.lua") ; default path
      version-control
- 
 
      ;;-------------------------------Checking-------------------------------------------------------
      (spell-checking :variables spell-checking-enable-by-default nil)
@@ -287,6 +289,7 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
+                         modus-operandi
                          spacemacs-dark
                          default
                          spacemacs-light
@@ -313,7 +316,8 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    ;; dotspacemacs-default-font '("Source Code Pro"
-   dotspacemacs-default-font '("0xProto Nerd Font"
+   dotspacemacs-default-font '("0xProto"
+                               ;; dotspacemacs-default-font '("0xProto Nerd Font"
                                :size 25
                                :weight normal
                                :width normal)
@@ -396,7 +400,8 @@ It should only modify the values of Spacemacs settings."
    ;; `top-center', `bottom-center', `top-left-corner', `top-right-corner',
    ;; `top-right-corner', `bottom-left-corner' or `bottom-right-corner'
    ;; (default 'bottom)
-   dotspacemacs-which-key-position 'bottom
+   ;; dotspacemacs-which-key-position 'right ;;Edward add this line in 2024/6/14
+   dotspacemacs-which-key-position '(posframe . top-center)
 
    ;; Control where `switch-to-buffer' displays the buffer. If nil,
    ;; `switch-to-buffer' displays the buffer in the current window even if
@@ -640,7 +645,21 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;------------------------------general config-------------------------------------------------------
   (setq-default scroll-margin 5);;My add config: scroll marin set 4 lines.
+  ;;globla display line numbers. Edward add this line in 2024/6/14, @https://emacs-china.org/t/spacemacs-fundmental/18070/3
+  (global-display-line-numbers-mode)
+
+  (toggle-frame-fullscreen)
+
+  ;;set proxy
+
+  ;;-----------------------------add file to list-----------------------------------------------------
+  ;; Use text mode for file that doesn't have an extension. edward add this line in 2024/6/14, @https://emacs-china.org/t/spacemacs-fundmental/18070/3
+  (add-to-list 'auto-mode-alist '("/[^./]*\\'" . text-mode))
+  ;; Use conf-mode for dotfiles.
+  (add-to-list 'auto-mode-alist '("/\\.[^/]*\\'" . conf-mode))
+  (add-to-list 'auto-mode-alist '("/\\.[^/]*rc\\'" . text-mode))
 
 
   ;; ;; My add config: file browser start
@@ -681,25 +700,80 @@ before packages are loaded."
   ;;------------------- (global-set-key (kbd "SPC '") 'ansi-term)
   (define-key evil-normal-state-map (kbd "SPC '") 'ansi-term)
 
+  ;;see @https://blog.csdn.net/u010164190/article/details/71124582粘贴流程图片展示
+  ;see @https://hugoheden.wordpress.com/2009/03/08/copypaste-with-emacs-in-terminal/
+  ;Copy/paste with emacs in terminal
+  ;; https://hugoheden.wordpress.com/2009/03/08/copypaste-with-emacs-in-terminal/
+  ;; I prefer using the "clipboard" selection (the one the
+  ;; typically is used by c-c/c-v) before the primary selection
+  ;; (that uses mouse-select/middle-button-click)
+  (setq x-select-enable-clipboard t) ;;linux 图形化版本 ---> edward add this line in 2024/6/13
+  ;; If emacs is run in a terminal, the clipboard- functions have no
+  ;; effect. Instead, we use of xsel, see
+  ;; http://www.vergenet.net/~conrad/software/xsel/ -- "a command-line
+  ;; program for getting and setting the contents of the X selection"
+  ;;Linux 命令行版本 --> edward add this line in 2024/6/13
+  (unless window-system
+    (when (getenv "DISPLAY")
+      ;; Callback for when user cuts
+      (defun xsel-cut-function (text &optional push)
+        ;; Insert text to temp-buffer, and "send" content to xsel stdin
+        (with-temp-buffer
+          (insert text)
+          ;; I prefer using the "clipboard" selection (the one the
+          ;; typically is used by c-c/c-v) before the primary selection
+          ;; (that uses mouse-select/middle-button-click)
+          (call-process-region (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
+      ;; Call back for when user pastes
+      (defun xsel-paste-function()
+        ;; Find out what is current selection by xsel. If it is different
+        ;; from the top of the kill-ring (car kill-ring), then return
+        ;; it. Else, nil is returned, so whatever is in the top of the
+        ;; kill-ring will be used.
+        (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
+          (unless (string= (car kill-ring) xsel-output)
+ 	          xsel-output )))
+      ;; Attach callbacks to hooks
+      (setq interprogram-cut-function 'xsel-cut-function)
+      (setq interprogram-paste-function 'xsel-paste-function)
+      ;; Idea from
+      ;; http://shreevatsa.wordpress.com/2006/10/22/emacs-copypaste-and-x/
+      ;; http://www.mail-archive.com/help-gnu-emacs@gnu.org/msg03577.html
+      ))
+
+    ;;copy&paste Mac图形化与命令行版本 ----> edward add this line in 2024/6/13
+    ;; (defun copy-from-osx ()
+    ;;   (shell-command-to-string "pbpaste"))
+    ;; (defun paste-to-osx (text &optional push)
+    ;;   (let ((process-connection-type nil))
+    ;;     (let ((proc (start-process"pbcopy" "*Messages*" "pbcopy")))
+    ;;       (process-send-string proc text)
+    ;;       (process-send-eof proc))))
+    ;; (setq interprogram-cut-function 'paste-to-osx)
+    ;; (setq interprogram-paste-function 'copy-from-osx)
+
   ;(evil-define-key 'normal 'global (kbd "SPC '") 'my-open-shell)
   ;;------------------- My add config: open shell end.
 
-  (evil-define-key 'emacs 'global (kbd "<capslock>") 'evil-escape)
+  ;; (evil-define-key 'emacs 'global (kbd "<capslock>") 'evil-escape)
 
   ;;------------------- My add config: open .zshrc start.
-  (spacemacs/set-leader-keys "fez" 'open-zshrc-file)
+  ;(spacemacs/set-leader-keys "fez" 'open-zshrc-file)
 
   (defun open-zshrc-file ()
     "Open the .zshrc file in the home directory."
     (interactive)
     (find-file "~/.zshrc"))
+
+  (define-key evil-normal-state-map (kbd "SPC fez") 'open-zshrc-file)
   ;;------------------- My add config: open .zshrc end.
 
-  (setq neo-theme (if (display-graphic-p) 'icons 'nerd))
-  (setq neo-window-width 20)
-  (setq neo-show-hidden-fil s t)
-  (setq neo-smart-open t)
-  (setq neo-autorefresh t)
+  ;;Please install all-the-icons: M-x all-the-icons-install-fonts
+  (setq neo-theme (if (display-graphic-p) 'icons 'all-the-icons))
+  ;; (setq neo-window-width 20)
+  ;; (setq neo-show-hidden-fil s t)
+  ;; (setq neo-smart-open t)
+  ;; (setq neo-autorefresh t)
 
 
   ;;@see at https://github.com/emacs-lsp/lsp-mode/issues/2255, to slove Invalid face reference: lsp-flycheck-info-unnecessary #2255
@@ -724,7 +798,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(helm-rtags helm-spotify-plus multi helm wfnames helm-core counsel-projectile counsel counsel-spotify flyspell-correct-ivy ivy-avy ivy-hydra ivy-purpose ivy-rtags ivy-xref ivy-yasnippet lsp-ivy smex swiper ivy wgrep treemacs-all-the-icons helm-lsp lsp-origami origami lsp-treemacs lsp-ui lsp-mode auto-dictionary auto-yasnippet browse-at-remote diff-hl flycheck-pos-tip pos-tip flyspell-correct-helm flyspell-correct helm-c-yasnippet helm-company yasnippet-snippets yasnippet evil-org git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot helm-git-grep helm-ls-git helm-org-rifle htmlize org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-project-capture org-category-capture org-rich-yank orgit-forge orgit forge yaml ghub closql emacsql treepy smeargle treemacs-magit magit magit-section git-commit with-editor transient company emoji-cheat-sheet-plus gh-md markdown-mode valign vmd-mode monokai-theme farmhouse-themes ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-comint helm-ag google-translate golden-ratio flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
+   '(which-key-posframe blacken code-cells company-anaconda anaconda-mode counsel-gtags cython-mode ggtags helm-cscope helm-pydoc importmagic epc ctable concurrent live-py-mode lsp-pyright pip-requirements pipenv load-env-vars pippel poetry py-isort pydoc pyenv-mode pythonic pylookup pytest pyvenv sphinx-doc stickyfunc-enhance xcscope yapfify helm-rtags helm-spotify-plus multi helm wfnames helm-core counsel-projectile counsel counsel-spotify flyspell-correct-ivy ivy-avy ivy-hydra ivy-purpose ivy-rtags ivy-xref ivy-yasnippet lsp-ivy smex swiper ivy wgrep treemacs-all-the-icons helm-lsp lsp-origami origami lsp-treemacs lsp-ui lsp-mode auto-dictionary auto-yasnippet browse-at-remote diff-hl flycheck-pos-tip pos-tip flyspell-correct-helm flyspell-correct helm-c-yasnippet helm-company yasnippet-snippets yasnippet evil-org git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot helm-git-grep helm-ls-git helm-org-rifle htmlize org-cliplink org-contrib org-download org-mime org-pomodoro alert log4e gntp org-present org-projectile org-project-capture org-category-capture org-rich-yank orgit-forge orgit forge yaml ghub closql emacsql treepy smeargle treemacs-magit magit magit-section git-commit with-editor transient company emoji-cheat-sheet-plus gh-md markdown-mode valign vmd-mode monokai-theme farmhouse-themes ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-comint helm-ag google-translate golden-ratio flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
