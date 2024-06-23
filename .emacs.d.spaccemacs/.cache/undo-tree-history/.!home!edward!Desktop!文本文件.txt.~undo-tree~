@@ -1,0 +1,307 @@
+(undo-tree-save-format-version . 1)
+"d624fe60f33dd3fef6c29c52f94b4cc4f1cbf856"
+[nil nil nil nil (26223 7152 963951 115000) 0 nil]
+([nil nil ((nil rear-nonsticky nil 4332 . 4333) (nil fontified nil 3 . 4333) (3 . 4333) (t 26223 7079 736676 794000)) nil (26223 7165 52805 218000) 0 nil] [nil nil ((nil rear-nonsticky nil 4332 . 4333) (nil fontified nil 3 . 4333) (3 . 4333) (t 26223 7079 736676 794000)) ((#("article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: 0xProto;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}Linux
+h1 {
+  font-size: 2em;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: \"\\201C\" \"\\201D\" \"\\2018\" \"\\2019\";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type=\"button\"],
+input[type=\"reset\"],
+input[type=\"submit\"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type=\"checkbox\"],
+input[type=\"radio\"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=\"search\"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=\"search\"]::-webkit-search-cancel-button,
+input[type=\"search\"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-family: 'PT Sans', sans-serif;
+}
+pre,
+code {
+  font-family: 'Inconsolata', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 700;
+}
+html {
+  background-color: #073642;
+  color: #839496;
+}
+body {
+  background-color: #002b36;
+  margin: 0 auto;
+  min-width: 23cm;    /*calibre 5 滚动式 这里建议不要用max-width */
+  border: 1pt solid #586e75;
+  padding: 1em;
+}
+code {
+  background-color: #CCFFFF; /*calibre 5 这里改成亮色更好*/
+  padding: 2px;
+}
+a {
+  color: #b58900;
+}
+a:visited {
+  color: #cb4b16;
+}
+a:hover {
+  color: #cb4b16;
+}
+h1 {
+  color: #d33682;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #859900;
+}
+pre {
+  background-color: #002b36;
+  color: #839496;
+  border: 1pt solid #586e75;
+  padding: 1em;
+  box-shadow: 5pt 5pt 8pt #073642;
+}
+pre code {
+  background-color: #002b36;
+}
+h1 {
+  font-size: 2.8em;
+}
+h2 {
+  font-size: 2.4em;
+}
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.3em;
+}
+h6 {
+  font-size: 1.15em;
+}
+.tag {
+  background-color: #073642;
+  color: #d33682;
+  padding: 0 0.2em;
+}
+.todo,
+.next,
+.done {
+  color: #002b36;
+  background-color: #dc322f;
+  padding: 0 0.2em;
+}
+.tag {
+  -webkit-border-radius: 0.35em;
+  -moz-border-radius: 0.35em;
+  border-radius: 0.35em;
+}
+.TODO {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #2aa198;
+}
+.NEXT {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.ACTIVE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.DONE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}
+.WAITING {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #cb4b16;
+}
+.HOLD {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.NOTE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.CANCELLED {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}" 0 640 (fontified nil) 640 647 (fontified nil) 647 1500 (fontified nil) 1500 1517 (fontified nil) 1517 2147 (fontified nil) 2147 2187 (fontified nil) 2187 3017 (fontified nil) 3017 3035 (fontified nil) 3035 3042 (fontified nil) 3042 3063 (fontified nil) 3063 3232 (fontified nil) 3232 3239 (fontified nil) 3239 3330 (fontified nil) 3330 3334 (fontified nil face ((:foreground "#721045") hl-todo)) 3334 3454 (fontified nil) 3454 3458 (fontified nil face ((:foreground "#5317ac") hl-todo)) 3458 3522 (fontified nil) 3522 3575 (fontified nil) 3575 3577 (fontified nil) 3577 3587 (fontified nil) 3587 3619 (fontified nil) 3619 3648 (fontified nil) 3648 3672 (fontified nil) 3672 3701 (fontified nil) 3701 3703 (fontified nil) 3703 3704 (fontified nil) 3704 3708 (fontified nil face ((:foreground "#005e00") hl-todo)) 3708 3711 (fontified nil) 3711 3743 (fontified nil) 3743 3772 (fontified nil) 3772 3796 (fontified nil) 3796 3825 (fontified nil) 3825 3827 (fontified nil) 3827 3955 (fontified nil) 3955 3959 (fontified nil face ((:foreground "#70480f") hl-todo)) 3959 4079 (fontified nil) 4079 4083 (fontified nil face ((:foreground "#863927") hl-todo)) 4083 4329 (fontified nil) 4329 4330 (fontified nil rear-nonsticky nil)) . 3) (undo-tree-id5 . -640) (undo-tree-id6 . -607) (undo-tree-id7 . -640) (undo-tree-id8 . -4329) (undo-tree-id9 . -640) (undo-tree-id10 . -640) (undo-tree-id11 . -607) (undo-tree-id12 . -640) (undo-tree-id13 . -640) (undo-tree-id14 . -640) (undo-tree-id15 . -640) (undo-tree-id16 . -607) (undo-tree-id17 . -640) (undo-tree-id18 . -640) (undo-tree-id19 . -640) (undo-tree-id20 . -640) (undo-tree-id21 . -640) (undo-tree-id22 . -640) (undo-tree-id23 . -640) (undo-tree-id24 . -640) (undo-tree-id25 . -640) (undo-tree-id26 . -640) (undo-tree-id27 . -640) (undo-tree-id28 . -640) (undo-tree-id29 . -640) (undo-tree-id30 . -640) (undo-tree-id31 . -640) (undo-tree-id32 . -640) (undo-tree-id33 . -640) (undo-tree-id34 . -640) (undo-tree-id35 . -640) (undo-tree-id36 . -640) (undo-tree-id37 . -640) (undo-tree-id38 . -640) (undo-tree-id39 . -640) (undo-tree-id40 . -640) (undo-tree-id41 . -640) (undo-tree-id42 . -640) (undo-tree-id43 . -640) (undo-tree-id44 . -640) (undo-tree-id45 . -640) (undo-tree-id46 . -640) (undo-tree-id47 . -640) (undo-tree-id48 . -640) (undo-tree-id49 . -640) (undo-tree-id50 . -640) (undo-tree-id51 . -640) (undo-tree-id52 . -640) (undo-tree-id53 . -640) (undo-tree-id54 . -640) (undo-tree-id55 . -640) (undo-tree-id56 . -640) (undo-tree-id57 . -640) (undo-tree-id58 . -640) (undo-tree-id59 . -640) (undo-tree-id60 . -640) (undo-tree-id61 . -640) (undo-tree-id62 . -640) (undo-tree-id63 . -640) (undo-tree-id64 . -640) (undo-tree-id65 . -640) (undo-tree-id66 . -640) (undo-tree-id67 . -640) (undo-tree-id68 . -640) (undo-tree-id69 . -640) (undo-tree-id70 . -640) (undo-tree-id71 . -640) (undo-tree-id72 . -640) (undo-tree-id73 . -640) (undo-tree-id74 . -640) (undo-tree-id75 . -640) (undo-tree-id76 . -640) (undo-tree-id77 . -640) (undo-tree-id78 . -640) (undo-tree-id79 . -640) (undo-tree-id80 . -640) (undo-tree-id81 . -640) (undo-tree-id82 . -640) (undo-tree-id83 . -640) (undo-tree-id84 . -640) (undo-tree-id85 . -640) (undo-tree-id86 . -640) (undo-tree-id87 . -640) (undo-tree-id88 . -640) (undo-tree-id89 . -640) (undo-tree-id90 . -640) (undo-tree-id91 . -640) (undo-tree-id92 . -640) (undo-tree-id93 . -640) (undo-tree-id94 . -640) (undo-tree-id95 . -640) (undo-tree-id96 . -640) (undo-tree-id97 . -640) (undo-tree-id98 . -640) (undo-tree-id99 . -640) (undo-tree-id100 . -640) (undo-tree-id101 . -640) (undo-tree-id102 . -640) (undo-tree-id103 . -640) (undo-tree-id104 . -640) (undo-tree-id105 . -640) (undo-tree-id106 . -640) (undo-tree-id107 . -640) (undo-tree-id108 . -640) (undo-tree-id109 . -640) (undo-tree-id110 . -640) (undo-tree-id111 . -640) (undo-tree-id112 . -640) (undo-tree-id113 . -640) (undo-tree-id114 . -640) (undo-tree-id115 . -640) (undo-tree-id116 . -640) (undo-tree-id117 . -640) (undo-tree-id118 . -640) (undo-tree-id119 . -640) (undo-tree-id120 . -640) (undo-tree-id121 . -640) (undo-tree-id122 . -640) (undo-tree-id123 . -640) (undo-tree-id124 . -640) (undo-tree-id125 . -640) (undo-tree-id126 . -640) (undo-tree-id127 . -640) (undo-tree-id128 . -640) (undo-tree-id129 . -640) (undo-tree-id130 . -640) (undo-tree-id131 . -640) (undo-tree-id132 . -640) (undo-tree-id133 . -640) (undo-tree-id134 . -640) (undo-tree-id135 . -640) (undo-tree-id136 . -640) (undo-tree-id137 . -640) (undo-tree-id138 . -640) (undo-tree-id139 . -640) (undo-tree-id140 . -640) (undo-tree-id141 . -640) (undo-tree-id142 . -640) (undo-tree-id143 . -640) (undo-tree-id144 . -640) (undo-tree-id145 . -640) (undo-tree-id146 . -640) (undo-tree-id147 . -640) (undo-tree-id148 . -640) (undo-tree-id149 . -640) (undo-tree-id150 . -640) (undo-tree-id151 . -640) (undo-tree-id152 . -640) (undo-tree-id153 . -640) (undo-tree-id154 . -640) (undo-tree-id155 . -640) (undo-tree-id156 . -640) (undo-tree-id157 . -640) (undo-tree-id158 . -640) (undo-tree-id159 . -640) (undo-tree-id160 . -640) (undo-tree-id161 . -640) (undo-tree-id162 . -640) (undo-tree-id163 . -640) (undo-tree-id164 . -640) (undo-tree-id165 . -640) (undo-tree-id166 . -640) (undo-tree-id167 . -640) (undo-tree-id168 . -640) (undo-tree-id169 . -640) (undo-tree-id170 . -640) (undo-tree-id171 . -640) (undo-tree-id172 . -640) (undo-tree-id173 . -640) (undo-tree-id174 . -640) (undo-tree-id175 . -640) (undo-tree-id176 . -640) (undo-tree-id177 . -640) (undo-tree-id178 . -640) (undo-tree-id179 . -640) (undo-tree-id180 . -640) (nil fontified nil 4086 . 4332) (nil fontified nil 4082 . 4086) (nil fontified nil 3962 . 4082) (nil fontified nil 3958 . 3962) (nil fontified nil 3830 . 3958) (nil fontified nil 3828 . 3830) (nil fontified nil 3799 . 3828) (nil fontified nil 3775 . 3799) (nil fontified nil 3746 . 3775) (nil fontified nil 3714 . 3746) (nil fontified nil 3711 . 3714) (nil fontified nil 3707 . 3711) (nil fontified nil 3706 . 3707) (nil fontified nil 3704 . 3706) (nil fontified nil 3675 . 3704) (nil fontified nil 3651 . 3675) (nil fontified nil 3622 . 3651) (nil fontified nil 3590 . 3622) (nil fontified nil 3580 . 3590) (nil fontified nil 3578 . 3580) (nil fontified nil 3525 . 3578) (nil fontified nil 3461 . 3525) (nil fontified nil 3457 . 3461) (nil fontified nil 3337 . 3457) (nil fontified nil 3333 . 3337) (nil fontified nil 3242 . 3333) (nil fontified nil 3235 . 3242) (nil fontified nil 3066 . 3235) (nil fontified nil 3045 . 3066) (nil fontified nil 3038 . 3045) (nil fontified nil 3020 . 3038) (nil fontified nil 2190 . 3020) (nil fontified t 2150 . 2190) (nil fontified t 1520 . 2150) (nil fontified t 1503 . 1520) (nil fontified t 650 . 1503) (nil fontified t 643 . 650) (nil fontified t 3 . 643) (nil rear-nonsticky t 4332 . 4333)) (26223 7152 562480 600000) 0 nil])
+([nil current ((4333 . 4334) 4121) nil (26223 7165 52802 82000) 0 nil])
+([nil nil ((643 . 644)) ((#("
+" 0 1 (fontified t)) . 643) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (undo-tree-id2 . -1) (undo-tree-id3 . -1) (undo-tree-id4 . -1)) (26223 7152 562402 174000) 0 nil])
+nil
+nil

@@ -1,0 +1,6 @@
+(undo-tree-save-format-version . 1)
+"617f6a0ba186bf7c50a152bd1d98fa01cc03850f"
+[nil nil nil nil (26231 3363 704641 372000) 0 nil]
+([nil current ((nil rear-nonsticky nil 149 . 150) (nil fontified nil 119 . 150) (119 . 150) 118 (t 26231 3261 425635 15000)) nil (26231 3387 53813 598000) 0 nil] [nil nil ((nil rear-nonsticky nil 150 . 151) (nil fontified nil 120 . 151) (120 . 151) 119 (t 26231 3261 425635 15000)) ((#(" env QT_SCREEN_SCALE_FACTORS=1 " 0 30 (fontified nil) 30 31 (rear-nonsticky nil fontified nil)) . 120) (undo-tree-id0 . -30) (undo-tree-id1 . -30) (undo-tree-id2 . -30) (undo-tree-id3 . -30) (undo-tree-id4 . -30) (undo-tree-id5 . -30) (nil rear-nonsticky t 150 . 151)) (26231 3363 704023 605000) 0 nil])
+nil
+nil

@@ -1,0 +1,8 @@
+(undo-tree-save-format-version . 1)
+"c4fbf1af57ad8bffa6e09d862fd29b6e84fc2ae1"
+[nil nil nil nil (26226 56812 812299 845000) 0 nil]
+([nil nil ((6241 . 6242) (t 26219 38537 296192 136000) 6241) nil (26226 56818 529360 353000) 0 nil] [nil nil ((nil rear-nonsticky nil 416 . 417) (nil fontified nil 299 . 417) (299 . 417) 298 (t 26219 38537 296192 136000)) ((#("git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" 0 117 (fontified nil) 117 118 (rear-nonsticky nil fontified nil)) . 299) (undo-tree-id0 . -117) (undo-tree-id1 . -117) (undo-tree-id2 . -117) (undo-tree-id3 . -117) (undo-tree-id4 . -117) (undo-tree-id5 . -117) (undo-tree-id6 . -117) (nil rear-nonsticky t 416 . 417)) (26226 56812 810922 638000) 0 nil])
+([nil current ((#("local" 0 5 (face font-lock-keyword-face fontified t)) . 5840) (undo-tree-id14 . -4) (undo-tree-id15 . -4) (undo-tree-id16 . -4)) nil (26226 59124 110192 914000) 0 nil] [nil nil ((nil rear-nonsticky nil 6359 . 6360) (nil fontified nil 6242 . 6360) (6242 . 6360)) ((#("git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" 0 117 (fontified nil) 117 118 (rear-nonsticky nil fontified nil)) . 6242) (undo-tree-id7 . -117) (undo-tree-id8 . -117) (undo-tree-id9 . -117) (undo-tree-id10 . -117) (undo-tree-id11 . -117) (undo-tree-id12 . -117) (undo-tree-id13 . -117) (nil rear-nonsticky t 6359 . 6360)) (26226 56818 528800 780000) 0 nil])
+nil
+nil
+nil

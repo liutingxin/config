@@ -1,0 +1,30 @@
+(undo-tree-save-format-version . 1)
+"94e89e36d8dd1550fb70d16b6b5e88348fe7701c"
+[nil nil nil nil (26231 32551 61896 719000) 0 nil]
+([nil nil ((3744 . 3983) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -3744) (3741 . 3743) (#("
+" 0 1 (fontified nil)) . -3741) (544 . 3742) (#(" " 0 1 (fontified nil)) . 544) (271 . 545) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(pylookup space-doc spacemacs-purpose-popwin spacemacs-whitespace-cleanup vim-powerline)))" 0 368 (fontified nil)) . -271) (t 26231 29322 636523 480000)) nil (26231 32551 61892 159000) 0 nil])
+([nil current ((3077 . 3316) (#("(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )" 0 239 (fontified nil)) . -3077) (3074 . 3076) (#("
+" 0 1 (fontified nil)) . -3074) (544 . 3075) (#(" " 0 1 (fontified nil)) . 544) (271 . 545) (#("(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(ace-jump-helm-line ace-link aggressive-indent all-the-icons auto-compile auto-dictionary auto-highlight-symbol auto-yasnippet blacken browse-at-remote ccls centered-cursor-mode clean-aindent-mode code-cells column-enforce-mode company-anaconda anaconda-mode company-c-headers company-lua company-rtags company-web web-completion-data company-ycmd cpp-auto-include cython-mode dap-mode lsp-docker lsp-treemacs bui treemacs cfrs pfuture ace-window define-word devdocs diff-hl dired-quick-sort disaster drag-stuff dumb-jump editorconfig elisp-def elisp-slime-nav emmet-mode emr clang-format list-utils eval-sexp-fu evil-anzu anzu evil-args evil-cleverparens paredit evil-collection annalist evil-easymotion evil-escape evil-exchange evil-goggles evil-iedit-state iedit evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-nerd-commenter evil-numbers evil-org evil-surround evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar expand-region eyebrowse fancy-battery flx-ido flx flycheck-elsa flycheck-package package-lint flycheck-pos-tip pos-tip flycheck-rtags flycheck-ycmd flycheck flyspell-correct-helm flyspell-correct gendoxy gh-md git-link git-messenger git-modes git-timemachine gitignore-templates gnuplot golden-ratio google-c-style google-translate helm-ag helm-c-yasnippet helm-comint helm-company company helm-css-scss helm-descbinds helm-git-grep helm-ls-git helm-lsp helm-make helm-mode-manager helm-org helm-org-rifle helm-projectile helm-purpose helm-pydoc helm-rtags helm-spotify-plus multi helm-swoop helm-themes helm-xref helm wfnames helm-core hide-comnt highlight-indentation highlight-numbers parent-mode highlight-parentheses hl-todo hungry-delete impatient-mode htmlize simple-httpd importmagic epc ctable concurrent indent-guide info+ inspector link-hint avy live-py-mode lorem-ipsum lsp-origami origami lsp-pyright lsp-ui lsp-mode lua-mode macrostep markdown-toc monokai-theme multi-line shut-up nameless neotree nose open-junk-file org-cliplink org-download org-pomodoro alert log4e gntp org-projectile org-project-capture org-category-capture org-rich-yank orgit-forge orgit forge yaml markdown-mode ghub closql emacsql treepy magit magit-section git-commit with-editor overseer ox-gfm paradox spinner password-generator persp-mode pip-requirements pipenv load-env-vars pippel poetry transient compat popwin posframe prettier-js pug-mode py-isort pydoc pyenv-mode pythonic f pytest pyvenv quickrun ht restart-emacs rtags scss-mode slim-mode smeargle spaceline powerline sphinx-doc spotify string-edit-at-point string-inflection symon tagedit undo-tree queue uuidgen vi-tilde-fringe volatile-highlights web-beautify window-purpose imenu-list winum writeroom-mode visual-fill-column yapfify yasnippet-snippets yasnippet ycmd pkg-info request-deferred s dash deferred epl async diminish dotenv-mode hydra lv which-key ws-butler web-mode vim-powerline toc-org term-cursor symbol-overlay spacemacs-whitespace-cleanup spacemacs-purpose-popwin space-doc smartparens sass-mode request rainbow-delimiters pylookup projectile popup pcre2el org-superstar org-present org-mime org-contrib hybrid-mode holy-mode evil-evilified-state bind-map)))" 0 3472 (fontified nil)) . -271) (t 26231 32551 101975 350000)) nil (26231 57979 938597 873000) 0 nil])
+nil

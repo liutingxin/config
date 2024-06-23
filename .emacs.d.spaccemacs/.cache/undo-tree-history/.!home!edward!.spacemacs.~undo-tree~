@@ -1,0 +1,8 @@
+(undo-tree-save-format-version . 1)
+"3d9b453f31dc466fdb58d6c159e35ac6fd29d61a"
+[nil nil nil nil (26231 58201 834249 61000) 0 nil]
+([nil nil ((nil rear-nonsticky nil 6596 . 6597) (#("
+" 0 1 (fontified nil)) . -6639) (6593 . 6640) 6592 (t 26231 57804 171093 671000)) nil (26231 58201 834247 432000) 0 nil])
+([nil nil ((apply -3 6548 6597 undo--wrap-and-run-primitive-undo 6548 6597 ((6551 . 6554)))) nil (26231 58201 834243 530000) 0 nil])
+([nil current ((#(")" 0 1 (face (rainbow-delimiters-unmatched-face) fontified t)) . 6641) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (t 26231 58201 960295 845000)) nil (26231 58204 821915 38000) 0 nil])
+nil

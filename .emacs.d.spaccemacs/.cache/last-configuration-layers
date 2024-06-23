@@ -1,0 +1,2 @@
+
+(setq dotspacemacs-configuration-layers '((html :variables web-fmt-tool 'web-beautify) org-enable-github-support t))

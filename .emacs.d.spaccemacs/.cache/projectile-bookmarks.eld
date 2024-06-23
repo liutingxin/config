@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/opt/git_clone/doublecmd-plugins/" "~/.config/wezterm/" "~/config/" "~/")

@@ -1,0 +1,155 @@
+From: edward@AE.mail-host-address-is-not-set
+To: 
+Subject: os
+--text follows this line--
+<#multipart type=alternative>
+<#part type=text/plain>
+#+title: 操作系统
+#+author: edward
+#+STARTUP: odd
+
+* Chap 1-1
+** me:  1-10 C D D D B ; C B A C A
+
+ANS:
+
+me:  11-18 A A D C D ; D A D
+
+ANS:
+
+** asd
+*** asdasdasd
+    sad
+** asd
+   
+* Chap 1-2
+
+fme:  1-10
+
+** asd
+sdasd sdas
+** asd
+*** asd
+    zxc
+**** sda
+     asdasdasdj
+***** sad 
+      sadzxfa
+      
+<#part type=text/html>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org96f24f1">1. Chap 1-1</a>
+<ul>
+<li><a href="#org551db18">1.1. me:  1-10 C D D D B ; C B A C A</a></li>
+<li><a href="#orgee56152">1.2. asd</a></li>
+<li><a href="#org8f9b954">1.3. asdasdasd</a></li>
+<li><a href="#orgb9cc8ec">1.4. asd</a></li>
+</ul>
+</li>
+<li><a href="#org55d61dc">2. Chap 1-2</a>
+<ul>
+<li><a href="#orged27072">2.1. asd</a></li>
+<li><a href="#org7ae782f">2.2. asd</a></li>
+<li><a href="#orga35681f">2.3. asd</a>
+<ul>
+<li><a href="#orgc240bfc">2.3.1. sda</a></li>
+<li><a href="#org8b97b35">2.3.2. sad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org96f24f1" class="outline-2">
+<h2 id="org96f24f1"><span class="section-number-2">1.</span> Chap 1-1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org551db18" class="outline-3">
+<h3 id="org551db18"><span class="section-number-3">1.1.</span> me:  1-10 C D D D B ; C B A C A</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+ANS:
+</p>
+
+<p>
+me:  11-18 A A D C D ; D A D
+</p>
+
+<p>
+ANS:
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee56152" class="outline-3">
+<h3 id="orgee56152"><span class="section-number-3">1.2.</span> asd</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org8f9b954" class="outline-3">
+<h3 id="org8f9b954"><span class="section-number-3">1.3.</span> asdasdasd</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+sad
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9cc8ec" class="outline-3">
+<h3 id="orgb9cc8ec"><span class="section-number-3">1.4.</span> asd</h3>
+</div>
+</div>
+
+<div id="outline-container-org55d61dc" class="outline-2">
+<h2 id="org55d61dc"><span class="section-number-2">2.</span> Chap 1-2</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+fme:  1-10
+</p>
+</div>
+
+<div id="outline-container-orged27072" class="outline-3">
+<h3 id="orged27072"><span class="section-number-3">2.1.</span> asd</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+sdasd sdas
+</p>
+</div>
+</div>
+<div id="outline-container-org7ae782f" class="outline-3">
+<h3 id="org7ae782f"><span class="section-number-3">2.2.</span> asd</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orga35681f" class="outline-3">
+<h3 id="orga35681f"><span class="section-number-3">2.3.</span> asd</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+zxc
+</p>
+</div>
+<div id="outline-container-orgc240bfc" class="outline-4">
+<h4 id="orgc240bfc"><span class="section-number-4">2.3.1.</span> sda</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+asdasdasdj
+</p>
+</div>
+<div id="outline-container-org8b97b35" class="outline-4">
+<h4 id="org8b97b35"><span class="section-number-4">2.3.2.</span> sad</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+sadzxfa
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<#/multipart>
+
+

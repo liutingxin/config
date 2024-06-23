@@ -1,0 +1,24 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/edward/.spacemacs" . 12495)
+ ("/home/edward/atk-tools/binary/simpleSection.c" . 336)
+ ("/run/media/edward/Black-Ops-III/video/逆向/滴水和NCK以及内核/malloc系统安全高级班/资料/密码.txt" . 295)
+ ("/home/edward/opt/git_clone/doublecmd-plugins/plugins/wlx/hx_webkit_crap/src/plugin.c" . 55)
+ ("/home/edward/.config/wezterm/TAGS" . 199)
+ ("/home/edward/.config/wezterm/wezterm.lua" . 225)
+ ("/home/edward/.config/wezterm/"
+  (dired-filename . "/home/edward/.config/wezterm/.."))
+ ("/home/edward/.config/wezterm/config/"
+  (dired-filename . "/home/edward/.config/wezterm/config/appearance.lua"))
+ ("/home/edward/.config/wezterm/config/domains.lua" . 687)
+ ("/home/edward/.config/wezterm/config/bindings.lua" . 6045)
+ ("/home/edward/.config/wezterm/config/fonts.lua" . 218)
+ ("/home/edward/.config/wezterm/utils/backdrops.lua" . 1733)
+ ("/home/edward/atk-tools/"
+  (dired-filename . "/home/edward/atk-tools/binary"))
+ ("/home/edward/atk-tools/binary/"
+  (dired-filename . "/home/edward/atk-tools/binary/simpleSection.c"))
+ ("/home/edward/dotfiles/flameshot/.config/flameshot/flameshot.ini" . 306)
+ ("/home/edward/Documents/Calibre Books/calibre_theme.css" . 2103)
+ ("/home/edward/Downloads/CTF竞赛权威指南（Pwn篇）(书签带目录) (杨超) (Z-Library).pdf" . 2382)
+ ("/usr/include/boost/thread/thread.hpp" . 126)
+ ("/usr/include/boost/thread/detail/thread.hpp" . 4481))

@@ -1,0 +1,5 @@
+(undo-tree-save-format-version . 1)
+"7f65cd19840ceaea580ea66f328a49f486e99900"
+[nil nil nil nil (26226 60305 84254 463000) 0 nil]
+([nil current ((apply 0 14 32 undo--wrap-and-run-primitive-undo 14 32 ((14 . 32) (#(":CATEGORY: wezterm" 0 18 (isearch-open-invisible-temporary org-fold-core--isearch-show-temporary isearch-open-invisible org-fold-core--isearch-show org-fold--spec-org-fold-drawer--1228103981078324195 org-fold-drawer wrap-prefix "" line-prefix "" fontified nil)) . -14))) (14 . 32) (14 . 15) (1 . 20) (t . -1)) nil (26226 60305 84250 761000) 0 nil])
+nil
